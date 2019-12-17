@@ -1,0 +1,12 @@
+1. schema sistem (componentele sistemului)
+   - ce informatii retin/unde
+   - serviciul in sine
+   - cine apeleaza serviciul
+   - functionalitati generale ale sistemului ("imita un PKI real? - cu revocare, emitere s.a.")
+
+2. serviciul in sine
+   - cate/ce functionalitati implementeaza - pe langa validarea semnaturilor
+
+3. tema nu presupune implementarea standardelor ETSI, ci validarea conform acestor standarde, dar trebuie totusi sa explic logica si modul in care au fost concepute 
+
+4. clientii serviciului si userii sistemului (web, iphone, android ? etc.)
