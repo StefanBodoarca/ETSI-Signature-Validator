@@ -1,0 +1,15 @@
+package com.ro.bodo.test.spring_boot_rest;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class ProductServiceController {
+
+	@RequestMapping(value = "/products")
+	public ResponseEntity<Object> getProducts() {
+		
+	}
+	
+	
+}
