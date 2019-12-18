@@ -1,24 +1,28 @@
 # disertatie
 
-https://spring.io/guides/gs/rest-service/
-https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent
-https://www.tutorialspoint.com/spring_boot/spring_boot_building_restful_web_services.htm
-https://www.baeldung.com/building-a-restful-web-service-with-spring-and-java-based-configuration
-https://dzone.com/articles/auto-generating-api-specifications-as-openapi-wsdl
-https://www.oracle.com/technetwork/java/javase/downloads/jdk13-downloads-5672538.html
-https://marketplace.eclipse.org/content/spring-tools-aka-spring-ide-and-spring-tool-suite
-https://dzone.com/articles/how-to-create-rest-api-with-spring-boot
-https://howtodoinjava.com/spring-boot2/rest/rest-api-example/
-https://spring.io/guides/gs/sts/
-https://www.baeldung.com/spring-vs-spring-boot
-https://www.baeldung.com/spring-request-param
+https://spring.io/guides/gs/rest-service/<br/>
+https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent<br/>
+https://www.tutorialspoint.com/spring_boot/spring_boot_building_restful_web_services.htm<br/>
+https://www.baeldung.com/building-a-restful-web-service-with-spring-and-java-based-configuration<br/>
+https://dzone.com/articles/auto-generating-api-specifications-as-openapi-wsdl<br/>
+https://www.oracle.com/technetwork/java/javase/downloads/jdk13-downloads-5672538.html<br/>
+https://marketplace.eclipse.org/content/spring-tools-aka-spring-ide-and-spring-tool-suite<br/>
+https://dzone.com/articles/how-to-create-rest-api-with-spring-boot<br/>
+https://howtodoinjava.com/spring-boot2/rest/rest-api-example/<br/>
+https://spring.io/guides/gs/sts/<br/>
+https://www.baeldung.com/spring-vs-spring-boot<br/>
+https://www.baeldung.com/spring-request-param<br/>
 
 # docs
 
-https://ec.europa.eu/cefdigital/DSS/webapp-demo/doc/dss-documentation.html
-https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/DSS+releases
-https://ec.europa.eu/cefdigital/code/projects/ESIG/repos/dss-demos/browse/dss-demo-webapp/src/main/java/eu/europa/esig/dss/web
-https://ec.europa.eu/cefdigital/DSS/webapp-demo
-https://ec.europa.eu/cefdigital/DSS/webapp-demo/apidocs/index.html
-https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/eSignature
-https://github.com/esig/dss
+https://ec.europa.eu/cefdigital/DSS/webapp-demo/doc/dss-documentation.html<br/>
+https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/DSS+releases<br/>
+https://ec.europa.eu/cefdigital/code/projects/ESIG/repos/dss-demos/browse/dss-demo-webapp/src/main/java/eu/europa/esig/dss/web<br/>
+https://ec.europa.eu/cefdigital/DSS/webapp-demo<br/>
+https://ec.europa.eu/cefdigital/DSS/webapp-demo/apidocs/index.html<br/>
+https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/eSignature<br/>
+https://github.com/esig/dss<br/>
+https://www.programcreek.com/java-api-examples/?code=esig%2Fdss%2Fdss-master%2Fdss-cookbook%2Fsrc%2Fmain%2Fjava%2Feu%2Feuropa%2Fesig%2Fdss%2Fcookbook%2Fexample%2Fsign%2FSigningApplication.java#<br/>
+https://www.programcreek.com/java-api-examples/?api=eu.europa.esig.dss.xades.XAdESSignatureParameters<br/>
+https://mvnrepository.com/artifact/org.digidoc4j.dss/dss-xades<br/>
+https://mvnrepository.com/artifact/org.digidoc4j.dss/sd-dss<br />
