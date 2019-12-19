@@ -26,3 +26,6 @@ https://www.programcreek.com/java-api-examples/?code=esig%2Fdss%2Fdss-master%2Fd
 https://www.programcreek.com/java-api-examples/?api=eu.europa.esig.dss.xades.XAdESSignatureParameters<br/>
 https://mvnrepository.com/artifact/org.digidoc4j.dss/dss-xades<br/>
 https://mvnrepository.com/artifact/org.digidoc4j.dss/sd-dss<br />
+
+PKI cmds:
+https://gist.github.com/Soarez/9688998<br>

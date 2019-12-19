@@ -1,0 +1,29 @@
+Generate an RSA key for the CA:
+$ openssl genrsa -out example.org.key 2048
+
+ Inspect the key:
+ $ openssl rsa -in example.org.key -noout -text
+
+ Extract rsa public key can be extracted from the private key:
+ $ openssl rsa -in example.org.key -pubout -out example.org.pubkey
+
+ Inspect the public key:
+ $ openssl rsa -in example.org.pubkey -pubin -noout -text
+
+ Generate a CSR:
+ $ openssl req -new -key example.org.key -out example.org.csr
+
+ Inspect CSR:
+ $ openssl req -in example.org.csr -noout -text
+
+ CSR from config file:
+ $ openssl req -new -out example.csr -config csr_file.conf
+
+Generate a self signed certificate for the CA:
+$ openssl req -new -x509 -key ca.key -out ca.crt
+
+Sign a certificate:
+$ openssl x509 -req -in example.org.csr -extfile v3.ext -CA ca.crt -CAkey ca.key -CAcreateserial -out example.org.crt
+
+Examine .crt:
+$ openssl x509 -in example.org.crt -noout -text
