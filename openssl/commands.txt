@@ -27,3 +27,6 @@ $ openssl x509 -req -in example.org.csr -extfile v3.ext -CA ca.crt -CAkey ca.key
 
 Examine .crt:
 $ openssl x509 -in example.org.crt -noout -text
+
+Sign .crt with ca cmd:
+$ openssl ca -config ca.cnf -out example.org.crt -infiles example.org.csr

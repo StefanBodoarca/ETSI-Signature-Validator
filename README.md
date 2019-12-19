@@ -28,4 +28,5 @@ https://mvnrepository.com/artifact/org.digidoc4j.dss/dss-xades<br/>
 https://mvnrepository.com/artifact/org.digidoc4j.dss/sd-dss<br />
 
 PKI cmds:
-https://gist.github.com/Soarez/9688998<br>
+https://gist.github.com/Soarez/9688998<br />
+https://www.phildev.net/ssl/opensslconf.html<br />
