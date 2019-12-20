@@ -874,3 +874,169 @@ Binding(CTRL+SHIFT+T,
 
 !ENTRY org.eclipse.ui 2 2 2019-12-18 15:16:33.665
 !MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+!SESSION 2019-12-20 09:55:37.142 -----------------------------------------------
+eclipse.buildId=4.11.0.I20190307-0500
+java.version=1.8.0_232
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.core 1 0 2019-12-20 09:55:48.974
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.jface 2 0 2019-12-20 09:55:49.705
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-12-20 09:55:49.705
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@18b04526,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2fd4312a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-20 09:55:55.066
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-20 09:55:55.066
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@2174319e[org.springframework.tooling.boot.ls:1.9.0.201907120625(id=518)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-20 09:55:55.068
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-20 09:55:55.099
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-20 09:55:56.319
+!MESSAGE Boot LS startup time from start to initialized: 1238ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-20 09:55:56.327
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.imffKFDLisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-20 09:55:56.327
+!MESSAGE subscribing to classpath changes: sts4.classpath.imffKFDL isBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-20 09:55:56.329
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-20 09:55:56.330
+!MESSAGE subsribers = {sts4.classpath.imffKFDL=Send Classpath Notifications(86)}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-20 09:55:56.330
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-20 09:55:56.333
+!MESSAGE project dss-test ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-20 09:55:56.333
+!MESSAGE project spring-boot-rest ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-20 09:55:56.334
+!MESSAGE Preparing classpath changed notification dss-test
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-20 09:55:56.334
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-20 09:55:56.334
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-20 09:55:56.334
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.imffKFDL => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-20 09:55:56.336
+!MESSAGE classpath=49 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-20 09:55:56.337
+!MESSAGE buffering callback sts4.classpath.imffKFDL dss-test false 49
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-20 09:55:56.337
+!MESSAGE Preparing classpath changed notification spring-boot-rest
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-20 09:55:56.337
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-20 09:55:56.338
+!MESSAGE classpath=65 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-20 09:55:56.338
+!MESSAGE buffering callback sts4.classpath.imffKFDL spring-boot-rest false 65
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-20 09:55:56.338
+!MESSAGE executing callback sts4.classpath.imffKFDL 2 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-20 09:55:56.357
+!MESSAGE executing callback sts4.classpath.imffKFDL SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-20 10:11:22.206
+!MESSAGE Preparing classpath changed notification dss-test
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-20 10:11:22.206
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-20 10:11:22.207
+!MESSAGE classpath=50 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-20 10:11:22.207
+!MESSAGE buffering callback sts4.classpath.imffKFDL dss-test false 50
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-20 10:11:22.207
+!MESSAGE executing callback sts4.classpath.imffKFDL 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-20 10:11:22.213
+!MESSAGE executing callback sts4.classpath.imffKFDL SUCCESS [done]
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-12-20 10:11:22.383
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-12-20 10:11:22.390
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-20 10:11:24.093
+!MESSAGE Preparing classpath changed notification dss-test
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-20 10:11:24.093
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-20 10:11:24.094
+!MESSAGE classpath=50 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-20 10:11:24.094
+!MESSAGE buffering callback sts4.classpath.imffKFDL dss-test false 50
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-20 10:11:24.095
+!MESSAGE executing callback sts4.classpath.imffKFDL 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-20 10:11:24.097
+!MESSAGE executing callback sts4.classpath.imffKFDL SUCCESS [done]
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-12-20 10:18:23.502
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-12-20 10:18:23.506
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-12-20 10:18:37.624
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-12-20 10:18:37.627
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-12-20 10:18:42.969
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-12-20 10:18:42.971
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.ui 2 2 2019-12-20 10:40:13.181
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)

@@ -8,11 +8,18 @@ import eu.europa.esig.dss.model.ToBeSigned;
 import eu.europa.esig.dss.validation.CommonCertificateVerifier;
 import eu.europa.esig.dss.xades.XAdESSignatureParameters;
 import eu.europa.esig.dss.xades.signature.XAdESService;
-import eu.europa.esig.dss.utils.Utils;
+import eu.europa.esig.dss.token.MSCAPISignatureToken;
+import eu.europa.esig.dss.token.DSSPrivateKeyEntry;
+import java.util.List;
 
 public class DssTest {
 	private static XAdESSignatureParameters parameters = new XAdESSignatureParameters();
 	static {
+		@SuppressWarnings("resource")
+		MSCAPISignatureToken signingToken = new MSCAPISignatureToken();
+		List<DSSPrivateKeyEntry> list = signingToken.getKeys();
+		System.out.println(list.size());
+		DSSPrivateKeyEntry privateKey = list.get(0);
 		parameters.setSignatureLevel(SignatureLevel.XAdES_BASELINE_B);
 		// We choose the type of the signature packaging (ENVELOPED, ENVELOPING, DETACHED).
 		parameters.setSignaturePackaging(SignaturePackaging.ENVELOPED);
@@ -38,5 +45,17 @@ public class DssTest {
 		// This function obtains the signature value for signed information using the
 		// private key and specified algorithm
 		SignatureValue signatureValue = signingToken.sign(dataToSign, parameters.getDigestAlgorithm(), privateKey);
+		
+		// We invoke the xadesService to sign the document with the signature value obtained in
+		// the previous step.
+		DSSDocument signedDocument = service.signDocument(toSignDocument, parameters, signatureValue);
+
+		// save the signed document on the filesystem
+		try {
+			signedDocument.save("target/signedXmlXadesMSCapi.xml");
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		
 	}
 }

@@ -1013,3 +1013,43 @@ org.eclipse.core.runtime.CoreException: Launch configuration App (1) references 
 2019-12-18 14:41:55,776 [Worker-28: Build Project] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
 2019-12-18 14:41:55,776 [Worker-28: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2019-12-18 15:16:25,350 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2019-12-20 09:55:54,950 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2019-12-20 10:11:20,765 [Worker-11: Cleaning selected projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.ro.bodo.test:dss-test:0.0.1-SNAPSHOT @ /home/stefan/workspace/disertatie/eclipse-workspace/dss-test/pom.xml.
+2019-12-20 10:11:21,159 [Worker-11: Cleaning selected projects] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://ec.europa.eu/cefdigital/artifact/content/repositories/esignaturedss/org/digidoc4j/dss/dss-token/5.5.d4j.1/dss-token-5.5.d4j.1.pom
+2019-12-20 10:11:21,427 [Worker-11: Cleaning selected projects] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/digidoc4j/dss/dss-token/5.5.d4j.1/dss-token-5.5.d4j.1.pom
+2019-12-20 10:11:21,579 [Worker-11: Cleaning selected projects] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/digidoc4j/dss/dss-token/5.5.d4j.1/dss-token-5.5.d4j.1.pom
+2019-12-20 10:11:21,665 [Worker-11: Cleaning selected projects] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://ec.europa.eu/cefdigital/artifact/content/repositories/esignaturedss/org/digidoc4j/dss/dss-token/5.5.d4j.1/dss-token-5.5.d4j.1.jar
+2019-12-20 10:11:21,756 [Worker-11: Cleaning selected projects] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://ec.europa.eu/cefdigital/artifact/content/repositories/esignaturedss/org/slf4j/slf4j-api/1.7.28/slf4j-api-1.7.28.jar
+2019-12-20 10:11:21,963 [Worker-11: Cleaning selected projects] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/digidoc4j/dss/dss-token/5.5.d4j.1/dss-token-5.5.d4j.1.jar
+2019-12-20 10:11:22,029 [Worker-11: Cleaning selected projects] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/digidoc4j/dss/dss-token/5.5.d4j.1/dss-token-5.5.d4j.1.jar
+2019-12-20 10:11:22,061 [Worker-11: Cleaning selected projects] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.28/slf4j-api-1.7.28.jar
+2019-12-20 10:11:22,130 [Worker-11: Cleaning selected projects] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.28/slf4j-api-1.7.28.jar
+2019-12-20 10:11:22,383 [Worker-15: Build Project] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2019-12-20 10:11:22,386 [Worker-15: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-12-20 10:11:22,390 [Worker-15: Build Project] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2019-12-20 10:11:22,391 [Worker-15: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-12-20 10:11:23,465 [Worker-17: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://ec.europa.eu/cefdigital/artifact/content/repositories/esignaturedss/org/digidoc4j/dss/dss-token/5.5.d4j.1/dss-token-5.5.d4j.1-sources.jar
+2019-12-20 10:11:23,805 [Worker-17: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/digidoc4j/dss/dss-token/5.5.d4j.1/dss-token-5.5.d4j.1-sources.jar
+2019-12-20 10:11:23,872 [Worker-17: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/digidoc4j/dss/dss-token/5.5.d4j.1/dss-token-5.5.d4j.1-sources.jar
+2019-12-20 10:11:23,883 [Worker-17: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.digidoc4j.dss:dss-token:5.5.d4j.1
+2019-12-20 10:11:23,959 [Worker-17: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://ec.europa.eu/cefdigital/artifact/content/repositories/esignaturedss/org/slf4j/slf4j-api/1.7.28/slf4j-api-1.7.28-sources.jar
+2019-12-20 10:11:23,993 [Worker-17: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.28/slf4j-api-1.7.28-sources.jar
+2019-12-20 10:11:24,064 [Worker-17: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.28/slf4j-api-1.7.28-sources.jar
+2019-12-20 10:11:24,071 [Worker-17: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.slf4j:slf4j-api:1.7.28
+2019-12-20 10:18:23,502 [Worker-16: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2019-12-20 10:18:23,505 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-12-20 10:18:23,506 [Worker-16: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2019-12-20 10:18:23,506 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-12-20 10:18:23,592 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-20 10:18:23,593 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/stefan/workspace/disertatie/eclipse-workspace/spring-boot-rest/src/main/resources
+2019-12-20 10:18:23,593 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/stefan/workspace/disertatie/eclipse-workspace/spring-boot-rest/src/main/resources
+2019-12-20 10:18:23,594 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-20 10:18:23,594 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/stefan/workspace/disertatie/eclipse-workspace/spring-boot-rest/src/test/resources
+2019-12-20 10:18:37,623 [Worker-7: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2019-12-20 10:18:37,624 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-12-20 10:18:37,626 [Worker-7: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2019-12-20 10:18:37,627 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-12-20 10:18:42,969 [Worker-18: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2019-12-20 10:18:42,970 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-12-20 10:18:42,971 [Worker-18: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2019-12-20 10:18:42,971 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource

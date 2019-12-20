@@ -20,6 +20,12 @@
 	    <artifactId>dss-xades</artifactId>
 	    <version>5.5.d4j.1</version>
 	</dependency>
+	
+	<dependency>
+	    <groupId>org.digidoc4j.dss</groupId>
+	    <artifactId>dss-token</artifactId>
+	    <version>5.5.d4j.1</version>
+	</dependency>
 	 
 	
 	<!-- https://mvnrepository.com/artifact/org.digidoc4j.dss/sd-dss -->
