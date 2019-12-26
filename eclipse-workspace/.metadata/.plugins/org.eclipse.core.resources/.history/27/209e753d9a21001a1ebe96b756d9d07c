@@ -1,5 +1,0 @@
-import eu.europa.esig.dss.xades.XAdESSignatureParameters;
-
-public class DssTest {
-	private XAdESSignatureParameters parameters = new XAdESSignatureParameters();
-}

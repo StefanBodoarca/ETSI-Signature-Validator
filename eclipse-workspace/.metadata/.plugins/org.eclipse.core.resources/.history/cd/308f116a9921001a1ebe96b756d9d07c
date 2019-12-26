@@ -1,4 +1,0 @@
-
-public class DssTest {
-	private XAdESSignatureParameters parameters = new XAdESSignatureParameters();
-}
