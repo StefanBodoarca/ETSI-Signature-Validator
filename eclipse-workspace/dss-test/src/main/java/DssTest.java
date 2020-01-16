@@ -14,7 +14,8 @@ import java.util.List;
 
 public class DssTest {
 	private static XAdESSignatureParameters parameters = new XAdESSignatureParameters();
-	static {
+	
+	public DssTest() {
 		@SuppressWarnings("resource")
 		MSCAPISignatureToken signingToken = new MSCAPISignatureToken();
 		List<DSSPrivateKeyEntry> list = signingToken.getKeys();
@@ -56,6 +57,5 @@ public class DssTest {
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
-		
 	}
 }

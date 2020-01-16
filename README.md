@@ -26,7 +26,12 @@ https://www.programcreek.com/java-api-examples/?code=esig%2Fdss%2Fdss-master%2Fd
 https://www.programcreek.com/java-api-examples/?api=eu.europa.esig.dss.xades.XAdESSignatureParameters<br/>
 https://mvnrepository.com/artifact/org.digidoc4j.dss/dss-xades<br/>
 https://mvnrepository.com/artifact/org.digidoc4j.dss/sd-dss<br />
+https://ec.europa.eu/cefdigital/DSS/webapp-demo/apidocs/index.html<br />
+https://github.com/esig/dss-demonstrations
 
 PKI cmds:
 https://gist.github.com/Soarez/9688998<br />
 https://www.phildev.net/ssl/opensslconf.html<br />
+
+JKS:
+https://www.digitalocean.com/community/tutorials/java-keytool-essentials-working-with-java-keystores<br />
