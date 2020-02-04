@@ -1,1 +1,7 @@
 V	201219084421Z		01	unknown	/C=RO/ST=Romania/O=ATM/OU=ATM_PKI/CN=PKISILAB.com/emailAddress=admin@pki
+V	210119135842Z		02	unknown	/C=RO/ST=State_RO/O=ATM/OU=ATM_PKI/CN=PKISILAB.com/emailAddress=admin@pki
+V	210119140259Z		03	unknown	/C=RO/ST=State_RO/O=ATM/OU=KS_PKI/CN=KS.com/emailAddress=ks@pki
+V	210131164928Z		04	unknown	/C=RO/ST=State_RO/O=ATM/OU=ATM CA Authority/CN=C1/emailAddress=c1@pki.com
+V	210131164944Z		05	unknown	/C=RO/ST=State_RO/O=ATM/OU=ATM CA Authority/CN=C2/emailAddress=c2@pki.com
+R	210131164956Z	200201180142Z	06	unknown	/C=RO/ST=State_RO/O=ATM/OU=ATM CA Authority/CN=C3/emailAddress=c3@pki.com
+R	210131223644Z	200202224336Z	07	unknown	/C=RO/ST=State_RO/O=ATM/OU=ATM CA Authority/CN=C4/emailAddress=c4@pki.com

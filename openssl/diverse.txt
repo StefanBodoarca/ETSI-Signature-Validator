@@ -1,0 +1,15 @@
+pkcs12 -export -out keystore_personal.p12 -inkey ca.key -in ca.crt
+
+
+keytool -importcert -keystore $CATALINA_HOME/conf/keystore.p12 -trustcacerts -alias tomcat -keypass <keystore_password> -storepass <keystore_password> -file <certificatefilename> -storetype PKCS12 -providername JsafeJCE -keyalg RSA 
+
+mvn install:install-file \
+   -Dfile=/home/stefan/workspace/dss/dss-demonstrations/dss-mock-tsa/target/dss-mock-tsa-5.5.jar \
+   -DgroupId=eu.europa.ec.joinup.sd-dss \
+   -DartifactId=dss-mock-tsa \
+   -Dversion=5.5 \
+   -Dpackaging=jar \
+   -DgeneratePom=true
+
+
+keytool -importcert -keystore keystore.p12 -trustcacerts -alias tomcat -keypass dss-password -storepass dss-password -file /home/stefan/workspace/disertatie/openssl/ca/ca.crt -storetype PKCS12 -providername JsafeJCE -keyalg RSA 

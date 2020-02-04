@@ -1,0 +1,128 @@
+<!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.13</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.6</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.digidoc4j.dss/dss-utils -->
+		<dependency>
+			<groupId>org.digidoc4j.dss</groupId>
+			<artifactId>dss-utils</artifactId>
+			<version>5.5.d4j.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-collections4 -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-collections4</artifactId>
+			<version>4.4</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.9</version>
+		</dependency>
+		
+@RequestMapping(value = "/validation", method = RequestMethod.POST)
+	public ResponseEntity<Object> validateSignature(@RequestBody Object customJsonObject) {
+		CertificateVerifier cv = certificateVerifier;
+		
+		DSSDocument signedDocument = new FileDocument("src/main/resources/container-signed-xades-baseline-b.asics");
+		DSSDocument originalDocument = new FileDocument(new File("src/main/resources/test.xml"));
+		
+		List<DSSDocument> originalDocsList = new ArrayList<DSSDocument>();
+		originalDocsList.add(originalDocument);
+		
+		SignedDocumentValidator documentValidator = SignedDocumentValidator.fromDocument(originalDocument);
+		
+		documentValidator.setCertificateVerifier(cv);
+		documentValidator.setDetachedContents(originalDocsList);
+		Reports reports = documentValidator.validateDocument();
+
+		String xmlSimpleReport = reports.getXmlDetailedReport();
+		return new ResponseEntity<>(xmlSimpleReport, HttpStatus.OK);
+	}
+	
+	@Bean
+	public TSLValidationJob tslValidationJob() throws IOException {
+		//this was mine - let's see smth else
+//		TSLValidationJob validationJob = new TSLValidationJob();
+//		validationJob.setDataLoader(new CommonsDataLoader());
+//		//validationJob.setCheckLOTLSignature(true);
+//		//validationJob.setCheckTSLSignatures(true);
+//		//validationJob.setLotlUrl("https://ec.europa.eu/tools/lotl/eu-lotl.xml");
+//		//validationJob.setLotlCode("EU");
+//		validationJob.setOjContentKeyStore(trustStore());
+//		List<OtherTrustedList> listOtherTrustedLists = new ArrayList<OtherTrustedList>();
+//		listOtherTrustedLists.add(otherTrustedList());
+//		validationJob.setOtherTrustedLists(listOtherTrustedLists);
+//		validationJob.setRepository(tslRepository());
+//		//validationJob.refresh();
+		//return validationJob;
+		
+		
+		TSLValidationJob validationJob = new TSLValidationJob();
+		CommonsDataLoader dataLoader = new CommonsDataLoader();
+		TSLRepository tslRepository = new TSLRepository();
+		TrustedListsCertificateSource tslList = new TrustedListsCertificateSource();
+		
+		tslList.importAsTrusted(trustStore());
+		tslRepository.setTrustedListsCertificateSource(tslList);
+		
+		validationJob.setDataLoader(dataLoader);
+		validationJob.setRepository(tslRepository);
+		validationJob.setLotlUrl("https://ec.europa.eu/tools/lotl/eu-lotl.xml");
+		validationJob.setLotlCode("EU");
+		validationJob.setOjUrl("https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv:OJ.C_.2019.276.01.0001.01.ENG");
+		validationJob.setOjContentKeyStore(trustStore());
+//		List<OtherTrustedList> listOtherTrustedLists = new ArrayList<OtherTrustedList>();
+//		listOtherTrustedLists.add(otherTrustedList());
+//		validationJob.setOtherTrustedLists(listOtherTrustedLists);
+		validationJob.setCheckLOTLSignature(true);
+		validationJob.setCheckTSLSignatures(true);
+		return validationJob;
+	}
+	
+	
+	@Bean
+	public CertificateVerifier certificateVerifier() throws Exception {
+		CommonCertificateVerifier certificateVerifier = new CommonCertificateVerifier();
+		certificateVerifier.setTrustedCertSource(trustStore());
+		
+		// certificateVerifier.setCrlSource(cachedCRLSource());
+		// certificateVerifier.setOcspSource(cachedOCSPSource());
+		// certificateVerifier.setDataLoader(dataLoader());
+
+		// Default configs
+		//certificateVerifier.setExceptionOnMissingRevocationData(false);
+		//certificateVerifier.setCheckRevocationForUntrustedChains(true);
+
+		return certificateVerifier;
+	}
+	
+	
+	CertificateSource cs = cv.getTrustedCertSource();
+		CertificateToken crtToken = cs.getCertificatePool().getIssuer(token);
+		CRL_LIST = getCRList;
+		COfflineCRLSource cOfflineCRLSource = new COfflineCRLSource();
+		CRLValidity crlValidity = null;
+		crlValidity = new CRLValidity(new CRLBinary(CRL_LIST));
+		try {
+			crlValidity = CRLUtils.buildCRLValidity(new CRLBinary(CRL_LIST), crtToken);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		CRLToken crlToken = new CRLToken(crtToken, crlValidity);
+		cOfflineCRLSource.storeCRL(new CRLBinary(CRL_LIST), crlToken);
+		cv.setCrlSource(cOfflineCRLSource);

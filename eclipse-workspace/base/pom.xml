@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.2.3.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.ro.dss.validation.service</groupId>
+	<artifactId>base</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>base</name>
+	<description>Demo project for Spring Boot</description>
+
+	<properties>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<repositories>
+		<repository>
+			<id>cefdigital</id>
+			<name>cefdigital</name>
+			<url>https://ec.europa.eu/cefdigital/artifact/content/repositories/esignaturedss/</url>
+		</repository>
+	</repositories>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-beans -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<!-- <version>5.2.3.RELEASE</version> -->
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<!-- <version>5.2.3.RELEASE</version> -->
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<!-- <version>5.2.3.RELEASE</version> -->
+		</dependency>
+
+
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.junit.vintage</groupId>
+					<artifactId>junit-vintage-engine</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- dss dependencies <dependency> <groupId>org.digidoc4j.dss</groupId> 
+			<artifactId>dss-tsl-validation</artifactId> <version>5.2.d4j.2</version> 
+			</dependency> -->
+
+		<!-- Thanks for using https://jar-download.com -->
+		<dependency>
+			<groupId>org.digidoc4j.dss</groupId>
+			<artifactId>dss-tsl-validation</artifactId>
+			<version>5.5.d4j.1</version>
+		</dependency>
+
+
+		<!-- Choose your implementation -->
+		<!-- <dependency> -->
+		<!-- <groupId>eu.europa.ec.joinup.sd-dss</groupId> -->
+		<!-- <artifactId>dss-utils-apache-commons</artifactId> -->
+		<!-- </dependency> -->
+		<!-- <dependency> <groupId>eu.europa.ec.joinup.sd-dss</groupId> <artifactId>dss-utils-google-guava</artifactId> 
+			</dependency> -->
+
+		<!-- https://mvnrepository.com/artifact/org.digidoc4j.dss/dss-utils-google-guava -->
+		<dependency>
+			<groupId>org.digidoc4j.dss</groupId>
+			<artifactId>dss-utils-apache-commons</artifactId>
+			<version>5.5.d4j.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.digidoc4j.dss</groupId>
+			<artifactId>dss-remote-services</artifactId>
+			<version>5.4.d4j.1</version>
+		</dependency>
+		<!-- Thanks for using https://jar-download.com -->
+
+		<!-- https://mvnrepository.com/artifact/org.digidoc4j.dss/dss-document 
+			<dependency> <groupId>org.digidoc4j.dss</groupId> <artifactId>dss-document</artifactId> 
+			<version>5.5.d4j.1</version> </dependency> -->
+
+		<!-- https://mvnrepository.com/artifact/org.digidoc4j.dss/dss-validation-rest-client -->
+		<dependency>
+			<groupId>org.digidoc4j.dss</groupId>
+			<artifactId>dss-validation-rest-client</artifactId>
+			<version>5.5.d4j.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.digidoc4j.dss/dss-validation-rest -->
+		<dependency>
+			<groupId>org.digidoc4j.dss</groupId>
+			<artifactId>dss-validation-rest</artifactId>
+			<version>5.5.d4j.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.digidoc4j.dss/dss-pades -->
+		<dependency>
+			<groupId>org.digidoc4j.dss</groupId>
+			<artifactId>dss-pades</artifactId>
+			<version>5.5.d4j.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.digidoc4j.dss/dss-xades -->
+		<dependency>
+			<groupId>org.digidoc4j.dss</groupId>
+			<artifactId>dss-xades</artifactId>
+			<version>5.5.d4j.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.digidoc4j.dss/dss-asic-xades -->
+		<dependency>
+			<groupId>org.digidoc4j.dss</groupId>
+			<artifactId>dss-asic-xades</artifactId>
+			<version>5.5.d4j.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.digidoc4j.dss/dss-asic-xades -->
+		<dependency>
+			<groupId>org.digidoc4j.dss</groupId>
+			<artifactId>dss-asic-cades</artifactId>
+			<version>5.5.d4j.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.digidoc4j.dss/dss-token -->
+		<dependency>
+			<groupId>org.digidoc4j.dss</groupId>
+			<artifactId>dss-token</artifactId>
+			<version>5.5.d4j.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.digidoc4j.dss/dss-document -->
+		<dependency>
+			<groupId>org.digidoc4j.dss</groupId>
+			<artifactId>dss-document</artifactId>
+			<version>5.5.d4j.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.digidoc4j.dss/dss-cades -->
+		<dependency>
+			<groupId>org.digidoc4j.dss</groupId>
+			<artifactId>dss-cades</artifactId>
+			<version>5.5.d4j.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.digidoc4j.dss/dss-pades-pdfbox -->
+		<dependency>
+			<groupId>org.digidoc4j.dss</groupId>
+			<artifactId>dss-pades-pdfbox</artifactId>
+			<version>5.5.d4j.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.digidoc4j.dss/dss-enumerations -->
+		<dependency>
+			<groupId>org.digidoc4j.dss</groupId>
+			<artifactId>dss-enumerations</artifactId>
+			<version>5.5.d4j.1</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.digidoc4j.dss</groupId>
+			<artifactId>dss-spi</artifactId>
+			<version>5.5.d4j.1</version>
+		</dependency>
+		<!-- Thanks for using https://jar-download.com -->
+
+		<!-- https://mvnrepository.com/artifact/org.digidoc4j.dss/dss-service -->
+		<dependency>
+			<groupId>org.digidoc4j.dss</groupId>
+			<artifactId>dss-service</artifactId>
+			<version>5.5.d4j.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.digidoc4j.dss/dss-crl-parser-stream -->
+		<dependency>
+			<groupId>org.digidoc4j.dss</groupId>
+			<artifactId>dss-crl-parser-stream</artifactId>
+			<version>5.5.d4j.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.digidoc4j.dss/dss-server-signing-soap -->
+		<dependency>
+			<groupId>org.digidoc4j.dss</groupId>
+			<artifactId>dss-server-signing-soap</artifactId>
+			<version>5.5.d4j.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.digidoc4j.dss/dss-signature-rest -->
+		<dependency>
+			<groupId>org.digidoc4j.dss</groupId>
+			<artifactId>dss-signature-rest</artifactId>
+			<version>5.5.d4j.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.digidoc4j.dss/dss-certificate-validation-rest-client -->
+		<dependency>
+			<groupId>org.digidoc4j.dss</groupId>
+			<artifactId>dss-certificate-validation-rest-client</artifactId>
+			<version>5.5.d4j.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.digidoc4j.dss/dss-certificate-validation-soap-client -->
+		<dependency>
+			<groupId>org.digidoc4j.dss</groupId>
+			<artifactId>dss-certificate-validation-soap-client</artifactId>
+			<version>5.5.d4j.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.digidoc4j.dss/dss-validation-soap-client -->
+		<dependency>
+			<groupId>org.digidoc4j.dss</groupId>
+			<artifactId>dss-validation-soap-client</artifactId>
+			<version>5.5.d4j.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.digidoc4j.dss/dss-certificate-validation-common -->
+		<dependency>
+			<groupId>org.digidoc4j.dss</groupId>
+			<artifactId>dss-certificate-validation-common</artifactId>
+			<version>5.5.d4j.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.digidoc4j.dss</groupId>
+			<artifactId>dss-test</artifactId>
+			<version>5.5.d4j.1</version>
+		</dependency>
+		<!-- Thanks for using https://jar-download.com -->
+
+		<!-- https://mvnrepository.com/artifact/org.digidoc4j.dss/sd-dss -->
+		<dependency>
+			<groupId>org.digidoc4j.dss</groupId>
+			<artifactId>sd-dss</artifactId>
+			<version>5.5.d4j.1</version>
+			<type>pom</type>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.cxf/cxf-rt-transports-http -->
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-transports-http</artifactId>
+			<version>3.3.5</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.json/json -->
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20190722</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/log4j/log4j -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.xmlgraphics/fop -->
+		<dependency>
+			<groupId>org.apache.xmlgraphics</groupId>
+			<artifactId>fop</artifactId>
+			<version>2.4</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>commons-logging</artifactId>
+					<groupId>commons-logging</groupId>
+				</exclusion>
+				<exclusion>
+					<groupId>xalan</groupId>
+					<artifactId>xalan</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.zaxxer/HikariCP -->
+		<dependency>
+			<groupId>com.zaxxer</groupId>
+			<artifactId>HikariCP</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.hsqldb</groupId>
+			<artifactId>hsqldb</artifactId>
+		</dependency>
+
+
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

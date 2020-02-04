@@ -12,6 +12,10 @@ https://howtodoinjava.com/spring-boot2/rest/rest-api-example/<br/>
 https://spring.io/guides/gs/sts/<br/>
 https://www.baeldung.com/spring-vs-spring-boot<br/>
 https://www.baeldung.com/spring-request-param<br/>
+https://dzone.com/articles/spring-boot-with-external-tomcat<br />
+https://ikurek.pl/deploying-spring-boot-with-nginx/<br />
+https://www.baeldung.com/java-http-request<br />
+https://www.tutorialspoint.com/spring_boot/spring_boot_tomcat_deployment.htm<br />
 
 # docs
 
@@ -35,3 +39,7 @@ https://www.phildev.net/ssl/opensslconf.html<br />
 
 JKS:
 https://www.digitalocean.com/community/tutorials/java-keytool-essentials-working-with-java-keystores<br />
+
+TOMCAT:
+https://www.digitalocean.com/community/tutorials/install-tomcat-9-ubuntu-1804<br />
+https://www.digitalocean.com/community/tutorials/how-to-encrypt-tomcat-8-connections-with-apache-or-nginx-on-ubuntu-16-04<br />
