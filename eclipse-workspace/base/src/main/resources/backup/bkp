@@ -126,3 +126,24 @@
 		CRLToken crlToken = new CRLToken(crtToken, crlValidity);
 		cOfflineCRLSource.storeCRL(new CRLBinary(CRL_LIST), crlToken);
 		cv.setCrlSource(cOfflineCRLSource);
+		
+		
+		
+@17_02_2020
+
+	@RequestMapping(value = "/validation/download-simple-report", method = RequestMethod.GET)
+	public void downloadSimpleReport(HttpSession session, HttpServletResponse response) {
+		
+		if(simpleReport != null) {
+			try {
+				String simpleReportRes = simpleReport;
+
+				response.setContentType(MimeType.PDF.getMimeTypeString());
+				response.setHeader("Content-Disposition", "attachment; filename=DSS-Simple-report.pdf");
+
+				fopService.generateSimpleReport(simpleReportRes, response.getOutputStream());
+			} catch (Exception e) {
+				logger.error("An error occurred while generating pdf for simple report : " + e.getMessage(), e);
+			}
+		}
+	}

@@ -1,0 +1,72 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            03:3d:01:90:72:82:5e:e3:39:7b:79:81:37:4e:16:c4
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=RO, ST=Bucharest, O=ATM ORG, OU=ATM ROOT CA, CN=ATM COMMON NAME/emailAddress=atm_ca@pki.com
+        Validity
+            Not Before: Feb  8 17:48:46 2020 GMT
+            Not After : Feb  7 17:48:46 2021 GMT
+        Subject: C=RO, ST=Bucharest, O=ATM ORG, OU=ATM ROOT CA, CN=x1/emailAddress=x1@pki.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                RSA Public-Key: (1024 bit)
+                Modulus:
+                    00:c8:ee:2c:2c:5a:3f:af:27:1c:d9:2b:bb:f4:44:
+                    1e:7c:56:f8:f0:87:7c:53:99:0e:70:c8:5e:d4:e7:
+                    68:5c:e5:0b:db:de:e4:60:a9:0d:ff:6f:b6:cc:b3:
+                    b5:3d:93:fe:46:04:38:90:62:d0:ef:2e:d4:e0:67:
+                    74:c7:53:62:60:46:ee:41:11:11:c1:fc:23:e7:da:
+                    e1:e1:d7:c2:60:10:49:89:4e:df:83:9b:ac:51:05:
+                    99:f1:26:9d:d5:2b:33:69:76:a1:3f:fe:da:14:e9:
+                    cc:9e:18:fa:d6:a0:f2:24:9a:fa:b1:55:73:1e:07:
+                    33:a8:a2:98:55:38:f9:dd:1d
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                OpenSSL Generated Certificate
+            X509v3 Subject Key Identifier: 
+                2D:C5:7A:39:9F:4C:68:DB:B8:50:06:C3:B8:BB:CC:D4:08:22:4B:40
+            X509v3 Authority Key Identifier: 
+                keyid:96:45:35:33:89:B7:3E:98:16:65:F3:65:67:E7:66:35:12:39:3F:98
+
+    Signature Algorithm: sha256WithRSAEncryption
+         68:6f:c8:cb:98:02:7f:c0:94:a5:4b:b4:73:67:b4:82:76:71:
+         be:50:10:31:74:c2:b6:91:1d:fc:fb:ee:af:9a:0f:ff:8d:ec:
+         9f:85:01:a9:93:4f:0b:f6:1b:56:3f:35:a2:5f:64:86:d4:7f:
+         3d:6e:f1:e0:f8:59:be:b9:cd:2a:59:b6:69:19:a6:89:f0:ef:
+         ae:b9:7b:73:7e:e6:eb:b3:2d:36:f4:a1:b2:fd:13:57:c6:f0:
+         d0:d8:e6:30:ce:ee:d6:ff:b5:d4:58:db:ab:61:23:d1:51:eb:
+         c8:1d:e3:f2:d8:eb:2b:ef:14:41:d2:1d:81:29:8a:b1:ce:c5:
+         ca:8f:f0:a4:f0:2b:7c:4b:ac:66:ea:24:b2:69:00:71:89:f2:
+         82:ad:2d:2d:a0:18:43:00:46:4d:90:2e:92:66:9d:10:70:fd:
+         ad:55:a3:93:99:5c:36:f8:2e:66:71:0a:89:23:2d:54:13:3b:
+         c7:95:e3:6d:9a:fa:8a:e0:3c:14:b2:20:2c:56:4a:ce:27:47:
+         29:ab:89:45:8b:c0:31:2a:e3:4b:a9:7f:75:17:3e:ec:74:3f:
+         5f:89:41:02:6b:7c:77:6c:1d:8f:d4:8f:6a:f6:96:10:7a:dd:
+         fc:bf:b3:d3:bb:e3:a0:ce:59:b2:68:55:b6:d2:1c:4b:1f:f4:
+         ba:51:ac:ff
+-----BEGIN CERTIFICATE-----
+MIIDdTCCAl2gAwIBAgIQAz0BkHKCXuM5e3mBN04WxDANBgkqhkiG9w0BAQsFADCB
+gjELMAkGA1UEBhMCUk8xEjAQBgNVBAgMCUJ1Y2hhcmVzdDEQMA4GA1UECgwHQVRN
+IE9SRzEUMBIGA1UECwwLQVRNIFJPT1QgQ0ExGDAWBgNVBAMMD0FUTSBDT01NT04g
+TkFNRTEdMBsGCSqGSIb3DQEJARYOYXRtX2NhQHBraS5jb20wHhcNMjAwMjA4MTc0
+ODQ2WhcNMjEwMjA3MTc0ODQ2WjBxMQswCQYDVQQGEwJSTzESMBAGA1UECAwJQnVj
+aGFyZXN0MRAwDgYDVQQKDAdBVE0gT1JHMRQwEgYDVQQLDAtBVE0gUk9PVCBDQTEL
+MAkGA1UEAwwCeDExGTAXBgkqhkiG9w0BCQEWCngxQHBraS5jb20wgZ8wDQYJKoZI
+hvcNAQEBBQADgY0AMIGJAoGBAMjuLCxaP68nHNkru/REHnxW+PCHfFOZDnDIXtTn
+aFzlC9ve5GCpDf9vtsyztT2T/kYEOJBi0O8u1OBndMdTYmBG7kEREcH8I+fa4eHX
+wmAQSYlO34ObrFEFmfEmndUrM2l2oT/+2hTpzJ4Y+tag8iSa+rFVcx4HM6iimFU4
++d0dAgMBAAGjezB5MAkGA1UdEwQCMAAwLAYJYIZIAYb4QgENBB8WHU9wZW5TU0wg
+R2VuZXJhdGVkIENlcnRpZmljYXRlMB0GA1UdDgQWBBQtxXo5n0xo27hQBsO4u8zU
+CCJLQDAfBgNVHSMEGDAWgBSWRTUzibc+mBZl82Vn52Y1Ejk/mDANBgkqhkiG9w0B
+AQsFAAOCAQEAaG/Iy5gCf8CUpUu0c2e0gnZxvlAQMXTCtpEd/Pvur5oP/43sn4UB
+qZNPC/YbVj81ol9khtR/PW7x4PhZvrnNKlm2aRmmifDvrrl7c37m67MtNvShsv0T
+V8bw0NjmMM7u1v+11Fjbq2Ej0VHryB3j8tjrK+8UQdIdgSmKsc7Fyo/wpPArfEus
+ZuoksmkAcYnygq0tLaAYQwBGTZAukmadEHD9rVWjk5lcNvguZnEKiSMtVBM7x5Xj
+bZr6iuA8FLIgLFZKzidHKauJRYvAMSrjS6l/dRc+7HQ/X4lBAmt8d2wdj9SPavaW
+EHrd/L+z07vjoM5ZsmhVttIcSx/0ulGs/w==
+-----END CERTIFICATE-----

@@ -40,6 +40,9 @@ https://www.phildev.net/ssl/opensslconf.html<br />
 JKS:
 https://www.digitalocean.com/community/tutorials/java-keytool-essentials-working-with-java-keystores<br />
 
+TSA:
+https://jimby.name/techbits/recent/openssl_tsa/<br />
+
 TOMCAT:
 https://www.digitalocean.com/community/tutorials/install-tomcat-9-ubuntu-1804<br />
 https://www.digitalocean.com/community/tutorials/how-to-encrypt-tomcat-8-connections-with-apache-or-nginx-on-ubuntu-16-04<br />

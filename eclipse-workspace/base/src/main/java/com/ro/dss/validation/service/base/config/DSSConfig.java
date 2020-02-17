@@ -1,11 +1,17 @@
 package com.ro.dss.validation.service.base.config;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import javax.sql.DataSource;
 
 import org.apache.log4j.Logger;
@@ -17,15 +23,22 @@ import org.springframework.context.annotation.Import;
 import org.springframework.core.io.ClassPathResource;
 
 import com.ro.dss.validation.service.base.controller.CertificateController;
+import com.ro.dss.validation.service.base.custom.CJdbcCacheCRLSource;
 import com.ro.dss.validation.service.base.custom.COfflineCRLSource;
 import com.ro.dss.validation.service.base.custom.CSignatureCRLSource;
 
 import eu.europa.esig.dss.crl.CRLBinary;
+import eu.europa.esig.dss.crl.CRLUtils;
+import eu.europa.esig.dss.crl.CRLValidity;
 import eu.europa.esig.dss.enumerations.RevocationOrigin;
 import eu.europa.esig.dss.model.x509.CertificateToken;
 import eu.europa.esig.dss.service.crl.JdbcCacheCRLSource;
 import eu.europa.esig.dss.service.crl.OnlineCRLSource;
 import eu.europa.esig.dss.service.http.commons.CommonsDataLoader;
+import eu.europa.esig.dss.service.http.commons.FileCacheDataLoader;
+import eu.europa.esig.dss.service.http.commons.OCSPDataLoader;
+import eu.europa.esig.dss.service.ocsp.JdbcCacheOCSPSource;
+import eu.europa.esig.dss.service.ocsp.OnlineOCSPSource;
 import eu.europa.esig.dss.spi.client.http.DataLoader;
 import eu.europa.esig.dss.spi.tsl.TrustedListsCertificateSource;
 import eu.europa.esig.dss.spi.x509.CertificateSource;
@@ -46,6 +59,15 @@ import eu.europa.esig.dss.validation.SignatureCRLSource;
 @Import(PersistenceConfig.class)
 public class DSSConfig {
 	private static final Logger LOG = Logger.getLogger(CertificateController.class.getName());
+	
+	@Value("${current.lotl.url}")
+	private String lotlUrl;
+
+	@Value("${lotl.country.code}")
+	private String lotlCountryCode;
+
+	@Value("${current.oj.url}")
+	private String currentOjUrl;
 
 	@Value("${content.keystore.type}")
 	private String ksType;
@@ -72,10 +94,7 @@ public class DSSConfig {
 	
 	@PostConstruct
 	public void fillCrlList() {
-		LOG.info("in @postconstruct - checkCRL");
 		CRL_LIST = dataLoader().get(crlURL);
-		LOG.info(CRL_LIST.length);
-		LOG.info(CRL_LIST);
 	}
 
 	@Bean
@@ -97,12 +116,13 @@ public class DSSConfig {
 	@Bean
 	public CertificateVerifier certificateVerifier() throws Exception {
 		CommonCertificateVerifier certificateVerifier = new CommonCertificateVerifier();
-		//certificateVerifier.setTrustedCertSource(trustStore());
 		certificateVerifier.setTrustedCertSource(trustedListSource());
-		//certificateVerifier.setCrlSource(cachedCRLSource());
-		certificateVerifier.setCrlSource(cofflineCRLSource());
+		//certificateVerifier.setTrustedCertSource(trustedListSourceSecond());
+		certificateVerifier.setCrlSource(cachedCRLSource());
+		//certificateVerifier.setOcspSource(cachedOCSPSource());
+		certificateVerifier.setOcspSource(onlineOcspSource());
+		//certificateVerifier.setCrlSource(cofflineCRLSource());
 		//certificateVerifier.setSignatureCRLSource(listCRLSource());
-		//certificateVerifier.setCrlSource(offlineCRLSource());
 		certificateVerifier.setDataLoader(dataLoader());
 
 		// Default configs
@@ -114,7 +134,8 @@ public class DSSConfig {
 	@Bean
 	public TSLRepository tslRepository() throws IOException {
 		TSLRepository tslRepository = new TSLRepository();
-		tslRepository.setTrustedListsCertificateSource(trustedListSource());
+		tslRepository.setTrustedListsCertificateSource(new TrustedListsCertificateSource());
+		
 		return tslRepository;
 	}
 
@@ -124,20 +145,10 @@ public class DSSConfig {
 		otherTrustedList.setTrustStore(trustStore());
 		return otherTrustedList;
 	}
-
-	@Bean
-	public TSLValidationJob tslValidationJob() throws IOException {
-		TSLValidationJob validationJob = new TSLValidationJob();
-		validationJob.setRepository(tslRepository());
-		validationJob.refresh();
-		return validationJob;
-	}
 	
 	@Bean
 	public CommonsDataLoader dataLoader() {
-		LOG.info("start data loader");
 		CommonsDataLoader dataLoader = new CommonsDataLoader();
-		dataLoader.get(crlURL, true);
 		return dataLoader;
 	}
 	
@@ -156,15 +167,18 @@ public class DSSConfig {
 	}
 	
 	@Bean
-	public ListCRLSource listCRLSource() {
+	public ListCRLSource listCRLSource() throws FileNotFoundException {
 		ListCRLSource listCRLSource = new ListCRLSource(cofflineCRLSource());
+		//ListCRLSource listCRLSource = new ListCRLSource(externalResourcesCRLSource());
 		return listCRLSource;
 	}
 	
 	@Bean
-	public OfflineCRLSource offlineCRLSource() {
-		OfflineCRLSource offlineCRLSource = null;
-		return offlineCRLSource;
+	public ExternalResourcesCRLSource externalResourcesCRLSource() throws FileNotFoundException {
+		File initialFile = new File(crlOfflinePath);
+		InputStream targetStream = new FileInputStream(initialFile);
+		ExternalResourcesCRLSource externalResourcesCRLSource = new ExternalResourcesCRLSource(targetStream);
+		return externalResourcesCRLSource;
 	}
 	
 	@Bean
@@ -172,7 +186,8 @@ public class DSSConfig {
 		JdbcCacheCRLSource jdbcCacheCRLSource = new JdbcCacheCRLSource();
 		jdbcCacheCRLSource.setDataSource(dataSource);
 		jdbcCacheCRLSource.setProxySource(onlineCRLSource());
-		jdbcCacheCRLSource.setDefaultNextUpdateDelay((long) (60 * 3)); // 3 minutes
+		jdbcCacheCRLSource.setDefaultNextUpdateDelay((long)(1)); // 3 minutes
+		jdbcCacheCRLSource.setMaxNextUpdateDelay((long)(15));
 		return jdbcCacheCRLSource;
 	}
 	
@@ -182,8 +197,59 @@ public class DSSConfig {
 		jdbcCacheCRLSource.initTable();
 	}
 	
+	@PostConstruct
+	public void cachedOCSPSourceInitialization() throws SQLException {
+		JdbcCacheOCSPSource jdbcCacheOCSPSource = cachedOCSPSource();
+		jdbcCacheOCSPSource.initTable();
+	}
+	
+	@PreDestroy
+	public void cachedCRLSourceClean() throws SQLException {
+		JdbcCacheCRLSource jdbcCacheCRLSource = cachedCRLSource();
+		jdbcCacheCRLSource.destroyTable();
+	}
+	
+	@PreDestroy
+	public void cachedOCSPSourceClean() throws SQLException {
+		JdbcCacheOCSPSource jdbcCacheOCSPSource = cachedOCSPSource();
+		jdbcCacheOCSPSource.destroyTable();
+	}
+	
 	@Bean
-	public byte[] getCRLList() {
-		return CRL_LIST;
+	public OCSPDataLoader ocspDataLoader() {
+		OCSPDataLoader ocspDataLoader = new OCSPDataLoader();
+		//ocspDataLoader.setProxyConfig(proxyConfig);
+		return ocspDataLoader;
+	}
+	
+	@Bean
+	public OnlineOCSPSource onlineOcspSource() {
+		OnlineOCSPSource onlineOCSPSource = new OnlineOCSPSource();
+		onlineOCSPSource.setDataLoader(ocspDataLoader());
+		return onlineOCSPSource;
+	}
+
+	@Bean
+	public JdbcCacheOCSPSource cachedOCSPSource() {
+		JdbcCacheOCSPSource jdbcCacheOCSPSource = new JdbcCacheOCSPSource();
+		jdbcCacheOCSPSource.setDataSource(dataSource);
+		jdbcCacheOCSPSource.setProxySource(onlineOcspSource());
+		//jdbcCacheOCSPSource.setDefaultNextUpdateDelay((long) (60 * 3)); // 3 minutes
+		return jdbcCacheOCSPSource;
+	}
+	
+	@Bean
+	public TSLValidationJob tslValidationJob() throws IOException {
+		TSLValidationJob validationJob = new TSLValidationJob();
+		validationJob.setDataLoader(dataLoader());
+		validationJob.setRepository(tslRepository());
+		validationJob.setOjContentKeyStore(trustStore());
+		validationJob.setLotlUrl(lotlUrl);
+		validationJob.setLotlCode(lotlCountryCode);
+		validationJob.setOjUrl(currentOjUrl);
+		validationJob.setCheckLOTLSignature(true);
+		validationJob.setCheckTSLSignatures(true);
+		validationJob.refresh();
+		return validationJob;
 	}
 }
