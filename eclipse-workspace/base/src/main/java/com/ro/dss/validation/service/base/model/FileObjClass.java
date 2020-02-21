@@ -5,10 +5,18 @@ import org.springframework.web.multipart.MultipartFile;
 public class FileObjClass {
 	private MultipartFile originalFile;
 	private MultipartFile signedFile;
+	private MultipartFile crtFile;
 	private String originalFileName;
 	private String signedFileName;
 	private String tsa;
 	
+	
+	public MultipartFile getCrtFile() {
+		return crtFile;
+	}
+	public void setCrtFile(MultipartFile crtFile) {
+		this.crtFile = crtFile;
+	}
 	public MultipartFile getOriginalFile() {
 		return originalFile;
 	}

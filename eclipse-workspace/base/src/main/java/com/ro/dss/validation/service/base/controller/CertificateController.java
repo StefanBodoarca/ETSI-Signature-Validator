@@ -4,6 +4,7 @@ import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
+import java.util.Set;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -40,7 +41,9 @@ import eu.europa.esig.dss.detailedreport.DetailedReport;
 import eu.europa.esig.dss.diagnostic.CertificateWrapper;
 import eu.europa.esig.dss.diagnostic.DiagnosticData;
 import eu.europa.esig.dss.diagnostic.DiagnosticDataFacade;
+import eu.europa.esig.dss.diagnostic.RevocationWrapper;
 import eu.europa.esig.dss.diagnostic.jaxb.XmlDiagnosticData;
+import eu.europa.esig.dss.enumerations.RevocationType;
 import eu.europa.esig.dss.model.DSSDocument;
 import eu.europa.esig.dss.model.DSSException;
 import eu.europa.esig.dss.model.MimeType;
@@ -163,7 +166,7 @@ public class CertificateController {
 
 		response.setContentType(MimeType.XML.getMimeTypeString());
 		response.setHeader("Content-Disposition", "attachment; filename=DSS-xml-diagnostic-data.xml");
-		try {.
+		try {
 			Utils.copy(new ByteArrayInputStream(report.getBytes()), response.getOutputStream());
 		} catch (IOException e) {
 			LOG.error("An error occured while outputing diagnostic data : " + e.getMessage(), e);
@@ -189,6 +192,48 @@ public class CertificateController {
 			Utils.copy(new ByteArrayInputStream(pemCert.getBytes()), response.getOutputStream());
 		} catch (IOException e) {
 			LOG.error("An error occured while downloading certificate : " + e.getMessage(), e);
+		}
+	}
+	
+	@RequestMapping(value = "/certificate/download-revocation")
+	public void downloadRevocationData(HttpSession session, HttpServletResponse response) {
+		String format = "pem";
+		DiagnosticData diagnosticData = getDiagnosticData();
+		Set<TokenDTO> allRevocations = AppUtils.buildTokenDtos(diagnosticData.getAllRevocationData());
+		RevocationWrapper revocationData = diagnosticData.getRevocationById(allRevocations.iterator().next().getId());
+		if (revocationData == null) {
+			String message = "Revocation data " + allRevocations.iterator().next().getId() + " not found";
+			LOG.warn(message);
+			throw new BadRequestException(message);
+		}
+		String filename = revocationData.getOrigin().name();
+		String mimeType;
+		byte[] is;
+
+		if (RevocationType.CRL.equals(revocationData.getRevocationType())) {
+			mimeType = MimeType.CRL.getMimeTypeString();
+			filename += ".crl";
+
+			if (Utils.areStringsEqualIgnoreCase(format, "pem")) {
+				String pem = "-----BEGIN CRL-----\n";
+				pem += Utils.toBase64(revocationData.getBinaries());
+				pem += revocationData;
+				pem += "\n-----END CRL-----";
+				is = pem.getBytes();
+			} else {
+				is = revocationData.getBinaries();
+			}
+		} else {
+			mimeType = MimeType.BINARY.getMimeTypeString();
+			filename += ".ocsp";
+			is = revocationData.getBinaries();
+		}
+		response.setContentType(mimeType);
+		response.setHeader("Content-Disposition", "attachment; filename=" + filename.replace(" ", "_"));
+		try {
+			Utils.copy(new ByteArrayInputStream(is), response.getOutputStream());
+		} catch (IOException e) {
+			LOG.error("An error occured while downloading revocation data : " + e.getMessage(), e);
 		}
 	}
 	

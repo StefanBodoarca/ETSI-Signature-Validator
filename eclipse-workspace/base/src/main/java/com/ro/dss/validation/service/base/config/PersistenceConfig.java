@@ -28,7 +28,7 @@ public class PersistenceConfig {
 	@Bean
 	public DataSource dataSource() {
 		HikariDataSource ds = new HikariDataSource();
-		ds.setPoolName("DSS-Hikari-Pool");
+		ds.setPoolName("SVA-Hikari-Pool");
 		ds.setJdbcUrl(dataSourceUrl);
 		ds.setDriverClassName(dataSourceDriverClassName);
 		ds.setUsername(username);

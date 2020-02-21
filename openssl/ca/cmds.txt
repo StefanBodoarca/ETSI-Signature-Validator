@@ -1,2 +1,0 @@
-openssl crl -inform DER -text -noout -in mycrl.crl
-Most CRLs are DER encoded, but you can use -inform PEM if your CRL is not binary.

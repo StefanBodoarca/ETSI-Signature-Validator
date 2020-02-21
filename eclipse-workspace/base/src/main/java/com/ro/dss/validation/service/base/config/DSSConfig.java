@@ -87,6 +87,9 @@ public class DSSConfig {
 	@Value("${crl.offline.path.source}")
 	private String crlOfflinePath;
 	
+	@Value("${crl.maximum.delay}")
+	private Integer crlMaximumDelay;
+	
 	@Autowired
 	private DataSource dataSource;
 	
@@ -134,7 +137,8 @@ public class DSSConfig {
 	@Bean
 	public TSLRepository tslRepository() throws IOException {
 		TSLRepository tslRepository = new TSLRepository();
-		tslRepository.setTrustedListsCertificateSource(new TrustedListsCertificateSource());
+		//tslRepository.setTrustedListsCertificateSource(new TrustedListsCertificateSource());
+		tslRepository.setTrustedListsCertificateSource(trustedListSource());
 		
 		return tslRepository;
 	}
@@ -187,7 +191,7 @@ public class DSSConfig {
 		jdbcCacheCRLSource.setDataSource(dataSource);
 		jdbcCacheCRLSource.setProxySource(onlineCRLSource());
 		jdbcCacheCRLSource.setDefaultNextUpdateDelay((long)(1)); // 3 minutes
-		jdbcCacheCRLSource.setMaxNextUpdateDelay((long)(15));
+		jdbcCacheCRLSource.setMaxNextUpdateDelay((long)(crlMaximumDelay * 60));
 		return jdbcCacheCRLSource;
 	}
 	

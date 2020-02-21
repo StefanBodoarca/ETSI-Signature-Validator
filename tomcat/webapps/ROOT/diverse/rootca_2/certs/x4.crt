@@ -1,0 +1,90 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            03:3d:01:90:72:82:5e:e3:39:7b:79:81:37:4e:16:c7
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=RO, ST=Bucharest, O=ATM ORG, OU=ATM ROOT CA, CN=ATM COMMON NAME/emailAddress=atm_ca@pki.com
+        Validity
+            Not Before: Feb  8 20:38:59 2020 GMT
+            Not After : Feb  7 20:38:59 2021 GMT
+        Subject: C=RO, ST=Bucharest, O=ATM ORG, OU=ATM ROOT CA, CN=x4/emailAddress=x4@pki.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                RSA Public-Key: (1024 bit)
+                Modulus:
+                    00:ca:da:9f:6e:d7:a0:8e:b2:91:78:28:c6:cf:0f:
+                    dd:21:df:ef:b2:28:b3:4b:99:17:64:2f:fa:83:9d:
+                    16:2b:8e:da:0b:71:f2:74:10:63:a2:22:04:dc:17:
+                    f0:bb:be:1c:a4:b8:96:80:f0:b0:ff:8d:65:b7:8b:
+                    9f:1c:7d:6f:4d:c3:e9:b0:4b:4b:6b:7a:d2:66:bf:
+                    76:8b:d4:96:eb:64:19:49:be:08:f2:17:0b:70:60:
+                    cf:ff:ad:5a:7a:82:e6:53:d1:43:4f:9b:0c:40:51:
+                    7c:e7:5d:3f:90:ff:bb:eb:20:f5:f1:c7:d0:18:90:
+                    0a:af:7e:ba:40:12:2f:2f:41
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                OpenSSL Generated Certificate
+            X509v3 Authority Key Identifier: 
+                keyid:96:45:35:33:89:B7:3E:98:16:65:F3:65:67:E7:66:35:12:39:3F:98
+
+            Authority Information Access: 
+                CA Issuers - URI:http://localhost:8080/diverse/rootca/root-ca.crt
+                OCSP - URI:http://127.0.0.1:8888
+
+            X509v3 CRL Distribution Points: 
+
+                Full Name:
+                  URI:http://localhost:8080/diverse/rootca/crl/crllist_der.crl
+
+            X509v3 Key Usage: 
+                Digital Signature, Non Repudiation, Key Encipherment, Data Encipherment, Key Agreement
+            X509v3 Extended Key Usage: 
+                TLS Web Client Authentication, TLS Web Server Authentication
+            X509v3 Subject Key Identifier: 
+                B8:56:93:93:0A:CD:42:A1:1D:77:4D:53:D7:F4:92:23:4E:5F:2C:B9
+    Signature Algorithm: sha256WithRSAEncryption
+         3e:63:d1:79:0c:43:64:ff:f1:2e:26:d8:d3:e7:f9:d6:f2:d2:
+         1c:bc:e5:69:bc:66:02:78:9c:e5:8d:dc:9f:e0:3b:12:48:dd:
+         4c:25:3f:c7:d1:19:d8:de:5d:d4:c0:8b:ca:23:fa:3f:b6:7b:
+         3c:b9:49:cd:ea:e1:c4:f4:97:8b:ca:60:d7:fc:eb:b0:32:e5:
+         1e:12:14:4b:9f:ba:34:14:08:09:8c:8a:9d:eb:8c:05:32:e6:
+         e7:c2:bb:8a:1c:3b:29:82:32:14:6d:83:75:7e:3e:29:14:f5:
+         10:5c:99:15:3d:cc:47:c9:24:e2:35:bf:d7:f7:b4:61:c0:8f:
+         2e:2c:99:85:d8:47:a5:a8:a1:9e:93:cc:35:d6:4a:7a:76:79:
+         e5:5c:99:98:f3:f5:a3:20:46:ef:6f:27:ca:34:a4:43:e7:38:
+         b4:5a:05:68:44:04:ba:57:b4:2b:c5:b2:ec:94:61:77:9d:23:
+         eb:6e:19:eb:6b:9e:fb:04:40:0a:86:bd:63:d8:14:ac:6f:21:
+         90:d7:a5:e1:cc:1d:7a:21:86:3c:45:85:15:c3:1b:18:43:57:
+         12:e9:2f:1b:57:2b:79:f2:1a:2a:fc:a7:fe:28:0c:d8:fa:27:
+         54:36:cb:63:cf:e2:75:73:3a:5a:05:2b:57:52:92:9e:47:39:
+         17:00:8c:0c
+-----BEGIN CERTIFICATE-----
+MIIEYTCCA0mgAwIBAgIQAz0BkHKCXuM5e3mBN04WxzANBgkqhkiG9w0BAQsFADCB
+gjELMAkGA1UEBhMCUk8xEjAQBgNVBAgMCUJ1Y2hhcmVzdDEQMA4GA1UECgwHQVRN
+IE9SRzEUMBIGA1UECwwLQVRNIFJPT1QgQ0ExGDAWBgNVBAMMD0FUTSBDT01NT04g
+TkFNRTEdMBsGCSqGSIb3DQEJARYOYXRtX2NhQHBraS5jb20wHhcNMjAwMjA4MjAz
+ODU5WhcNMjEwMjA3MjAzODU5WjBxMQswCQYDVQQGEwJSTzESMBAGA1UECAwJQnVj
+aGFyZXN0MRAwDgYDVQQKDAdBVE0gT1JHMRQwEgYDVQQLDAtBVE0gUk9PVCBDQTEL
+MAkGA1UEAwwCeDQxGTAXBgkqhkiG9w0BCQEWCng0QHBraS5jb20wgZ8wDQYJKoZI
+hvcNAQEBBQADgY0AMIGJAoGBAMran27XoI6ykXgoxs8P3SHf77Ios0uZF2Qv+oOd
+FiuO2gtx8nQQY6IiBNwX8Lu+HKS4loDwsP+NZbeLnxx9b03D6bBLS2t60ma/dovU
+lutkGUm+CPIXC3Bgz/+tWnqC5lPRQ0+bDEBRfOddP5D/u+sg9fHH0BiQCq9+ukAS
+Ly9BAgMBAAGjggFlMIIBYTAJBgNVHRMEAjAAMCwGCWCGSAGG+EIBDQQfFh1PcGVu
+U1NMIEdlbmVyYXRlZCBDZXJ0aWZpY2F0ZTAfBgNVHSMEGDAWgBSWRTUzibc+mBZl
+82Vn52Y1Ejk/mDBvBggrBgEFBQcBAQRjMGEwPAYIKwYBBQUHMAKGMGh0dHA6Ly9s
+b2NhbGhvc3Q6ODA4MC9kaXZlcnNlL3Jvb3RjYS9yb290LWNhLmNydDAhBggrBgEF
+BQcwAYYVaHR0cDovLzEyNy4wLjAuMTo4ODg4MEkGA1UdHwRCMEAwPqA8oDqGOGh0
+dHA6Ly9sb2NhbGhvc3Q6ODA4MC9kaXZlcnNlL3Jvb3RjYS9jcmwvY3JsbGlzdF9k
+ZXIuY3JsMAsGA1UdDwQEAwID+DAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUH
+AwEwHQYDVR0OBBYEFLhWk5MKzUKhHXdNU9f0kiNOXyy5MA0GCSqGSIb3DQEBCwUA
+A4IBAQA+Y9F5DENk//EuJtjT5/nW8tIcvOVpvGYCeJzljdyf4DsSSN1MJT/H0RnY
+3l3UwIvKI/o/tns8uUnN6uHE9JeLymDX/OuwMuUeEhRLn7o0FAgJjIqd64wFMubn
+wruKHDspgjIUbYN1fj4pFPUQXJkVPcxHySTiNb/X97RhwI8uLJmF2EelqKGek8w1
+1kp6dnnlXJmY8/WjIEbvbyfKNKRD5zi0WgVoRAS6V7QrxbLslGF3nSPrbhnra577
+BEAKhr1j2BSsbyGQ16XhzB16IYY8RYUVwxsYQ1cS6S8bVyt58hoq/Kf+KAzY+idU
+Nstjz+J1czpaBStXUpKeRzkXAIwM
+-----END CERTIFICATE-----

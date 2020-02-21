@@ -1,0 +1,240 @@
+OCSP Request Data:
+    Version: 1 (0x0)
+    Requestor List:
+        Certificate ID:
+          Hash Algorithm: sha1
+          Issuer Name Hash: FB0BF915DAD2E2EBCAD0994C3AD65C44A914C227
+          Issuer Key Hash: 9645353389B73E981665F36567E7663512393F98
+          Serial Number: 033D019072825EE3397B7981374E16C9
+OCSP Response Data:
+    OCSP Response Status: successful (0x0)
+    Response Type: Basic OCSP Response
+    Version: 1 (0x0)
+    Responder Id: C = RO, ST = Bucharest, O = ATM ORG, OU = ATM ROOT CA, CN = ocsp3, emailAddress = ocsp3@pki.com
+    Produced At: Feb 20 19:17:22 2020 GMT
+    Responses:
+    Certificate ID:
+      Hash Algorithm: sha1
+      Issuer Name Hash: FB0BF915DAD2E2EBCAD0994C3AD65C44A914C227
+      Issuer Key Hash: 9645353389B73E981665F36567E7663512393F98
+      Serial Number: 033D019072825EE3397B7981374E16C9
+    Cert Status: revoked
+    Revocation Time: Feb 17 00:56:00 2020 GMT
+    This Update: Feb 20 19:17:22 2020 GMT
+
+    Signature Algorithm: sha256WithRSAEncryption
+         ca:2f:66:b5:d7:9e:8b:d3:4c:89:99:40:30:08:5c:c0:ee:b7:
+         51:77:3d:07:c2:10:b7:dd:97:58:be:bf:27:d1:b0:c9:74:d9:
+         b6:b7:30:ec:89:08:8e:0c:15:40:57:f6:d1:ba:1e:6d:90:76:
+         4a:1e:5f:59:6a:ab:31:c6:e9:44:f1:f3:17:db:03:3a:23:e1:
+         e3:fc:71:c0:93:d0:03:7b:71:70:08:28:08:c0:8b:89:33:70:
+         8a:2f:74:1b:a8:29:28:82:67:c0:b2:11:57:c8:5d:a9:54:59:
+         15:8c:4e:e9:83:48:1f:4d:17:e6:f6:d4:c9:85:ae:38:73:21:
+         68:bd:e7:67:0d:29:fb:c3:0e:db:78:4c:f7:6e:b5:11:f5:77:
+         46:a9:34:c3:d6:64:1b:d7:ef:9f:2a:52:15:a1:27:8c:e2:67:
+         d2:52:00:5b:d2:e2:1a:ec:75:cd:78:cf:2b:1f:44:ab:85:a2:
+         a8:c5:d8:90:94:b9:1c:1e:22:9f:b3:15:96:d3:4e:d3:c1:bc:
+         47:5c:e4:a6:90:91:81:a0:84:6a:6c:3c:ad:c1:3e:77:74:12:
+         c5:ca:96:91:a5:e6:8e:1d:b6:22:fa:d0:7b:68:a3:5c:e1:70:
+         f1:6b:0c:fa:48:55:17:94:ca:19:0d:20:3f:96:75:cd:3a:1a:
+         42:90:88:35
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            03:3d:01:90:72:82:5e:e3:39:7b:79:81:37:4e:16:d8
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=RO, ST=Bucharest, O=ATM ORG, OU=ATM ROOT CA, CN=ATM COMMON NAME/emailAddress=atm_ca@pki.com
+        Validity
+            Not Before: Feb 17 13:39:54 2020 GMT
+            Not After : Feb 16 13:39:54 2021 GMT
+        Subject: C=RO, ST=Bucharest, O=ATM ORG, OU=ATM ROOT CA, CN=ocsp3/emailAddress=ocsp3@pki.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                RSA Public-Key: (2048 bit)
+                Modulus:
+                    00:ed:7a:e4:2c:8f:bf:72:75:3d:b3:8f:ec:b1:6e:
+                    7d:13:6c:05:78:c3:84:07:35:0b:fd:84:69:79:ea:
+                    51:a0:61:78:48:3b:7d:02:96:23:d7:e2:b8:54:2d:
+                    ca:db:17:f7:19:b8:ee:2d:e8:b3:61:ac:99:05:2a:
+                    bd:4b:52:e9:0c:4b:34:c9:b1:28:5a:ad:92:c4:92:
+                    03:ab:89:67:41:ee:94:c0:af:d1:36:60:24:3c:0d:
+                    98:a1:23:e1:19:ec:fb:c7:0d:d1:53:21:b3:6d:84:
+                    03:4e:2e:a8:4d:ff:20:ad:ca:c1:fe:d6:7e:92:76:
+                    52:ef:ba:49:ab:1a:d8:99:d3:e7:df:03:42:72:1e:
+                    5e:a2:c7:e3:5c:98:4e:40:6f:f0:48:61:e4:48:ec:
+                    ec:de:7c:c2:9e:01:84:a4:dd:46:c9:21:06:e3:6e:
+                    a6:f8:29:04:ae:3c:ba:af:a4:bf:be:2e:85:39:81:
+                    89:5f:06:fc:5a:54:2e:18:02:d0:7e:53:57:82:f6:
+                    a2:72:15:a2:11:ce:97:36:9c:aa:be:6c:c3:22:d5:
+                    30:23:f7:be:0b:d8:5b:96:5d:f5:f8:64:73:c0:3d:
+                    9b:4c:89:e2:06:28:12:8c:c7:b1:b7:57:70:36:12:
+                    8c:9a:b9:5c:fc:32:0f:eb:cd:89:51:8c:8c:c8:04:
+                    ad:b9
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            X509v3 Key Usage: 
+                Digital Signature, Non Repudiation, Key Encipherment
+            X509v3 Extended Key Usage: 
+                OCSP Signing
+            Authority Information Access: 
+                CA Issuers - URI:http://localhost:8080/diverse/rootca/root-ca.crt
+                OCSP - URI:http://127.0.0.1:8888
+
+            X509v3 CRL Distribution Points: 
+
+                Full Name:
+                  URI:http://localhost:8080/diverse/rootca/crl/crllist_der.crl
+
+    Signature Algorithm: sha256WithRSAEncryption
+         83:c1:85:87:a7:ed:b1:e2:4d:ba:fb:cd:b1:a4:09:a5:bb:c8:
+         5b:e9:65:c5:04:b0:b7:28:18:a0:d0:86:ba:a8:31:71:fe:ea:
+         20:d2:0c:11:3e:4d:70:5a:bf:da:2f:ea:e4:92:dc:e6:3b:79:
+         78:10:8a:e8:4c:1a:50:ed:d3:b2:9c:6b:b6:cf:c6:ad:4d:ff:
+         fa:92:ea:ac:be:36:e2:2f:f2:d1:df:cd:54:c1:67:44:f2:a0:
+         0c:46:95:3e:89:91:47:ad:27:93:c0:f7:40:d0:99:3c:af:8b:
+         da:80:c6:fd:f5:20:8a:5d:02:17:b9:64:d8:c6:a8:e8:cf:b7:
+         77:6e:90:3e:bf:78:4c:3e:7f:51:41:e5:96:6a:19:52:69:dc:
+         c7:a9:ee:d8:46:79:70:2e:e6:db:c5:74:c7:8d:94:8f:f1:7d:
+         f7:eb:61:e9:40:dd:7b:ef:da:de:3c:b0:5b:5f:04:29:ea:37:
+         33:bd:e4:91:6a:13:58:45:ad:e3:c0:f3:3a:1c:29:09:03:40:
+         fd:34:3f:6b:f7:7f:12:d8:df:47:6d:25:e9:be:5d:78:f8:82:
+         9a:c5:27:3d:29:80:db:1e:87:0b:bf:74:8a:31:13:4c:78:fb:
+         2b:84:43:aa:17:28:21:7e:fc:06:fa:35:20:49:81:c5:1d:24:
+         c5:94:71:72
+-----BEGIN CERTIFICATE-----
+MIIEcTCCA1mgAwIBAgIQAz0BkHKCXuM5e3mBN04W2DANBgkqhkiG9w0BAQsFADCB
+gjELMAkGA1UEBhMCUk8xEjAQBgNVBAgMCUJ1Y2hhcmVzdDEQMA4GA1UECgwHQVRN
+IE9SRzEUMBIGA1UECwwLQVRNIFJPT1QgQ0ExGDAWBgNVBAMMD0FUTSBDT01NT04g
+TkFNRTEdMBsGCSqGSIb3DQEJARYOYXRtX2NhQHBraS5jb20wHhcNMjAwMjE3MTMz
+OTU0WhcNMjEwMjE2MTMzOTU0WjB3MQswCQYDVQQGEwJSTzESMBAGA1UECAwJQnVj
+aGFyZXN0MRAwDgYDVQQKDAdBVE0gT1JHMRQwEgYDVQQLDAtBVE0gUk9PVCBDQTEO
+MAwGA1UEAwwFb2NzcDMxHDAaBgkqhkiG9w0BCQEWDW9jc3AzQHBraS5jb20wggEi
+MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDteuQsj79ydT2zj+yxbn0TbAV4
+w4QHNQv9hGl56lGgYXhIO30CliPX4rhULcrbF/cZuO4t6LNhrJkFKr1LUukMSzTJ
+sSharZLEkgOriWdB7pTAr9E2YCQ8DZihI+EZ7PvHDdFTIbNthANOLqhN/yCtysH+
+1n6SdlLvukmrGtiZ0+ffA0JyHl6ix+NcmE5Ab/BIYeRI7OzefMKeAYSk3UbJIQbj
+bqb4KQSuPLqvpL++LoU5gYlfBvxaVC4YAtB+U1eC9qJyFaIRzpc2nKq+bMMi1TAj
+974L2FuWXfX4ZHPAPZtMieIGKBKMx7G3V3A2EoyauVz8Mg/rzYlRjIzIBK25AgMB
+AAGjgewwgekwCQYDVR0TBAIwADALBgNVHQ8EBAMCBeAwEwYDVR0lBAwwCgYIKwYB
+BQUHAwkwbwYIKwYBBQUHAQEEYzBhMDwGCCsGAQUFBzAChjBodHRwOi8vbG9jYWxo
+b3N0OjgwODAvZGl2ZXJzZS9yb290Y2Evcm9vdC1jYS5jcnQwIQYIKwYBBQUHMAGG
+FWh0dHA6Ly8xMjcuMC4wLjE6ODg4ODBJBgNVHR8EQjBAMD6gPKA6hjhodHRwOi8v
+bG9jYWxob3N0OjgwODAvZGl2ZXJzZS9yb290Y2EvY3JsL2NybGxpc3RfZGVyLmNy
+bDANBgkqhkiG9w0BAQsFAAOCAQEAg8GFh6ftseJNuvvNsaQJpbvIW+llxQSwtygY
+oNCGuqgxcf7qINIMET5NcFq/2i/q5JLc5jt5eBCK6EwaUO3Tspxrts/GrU3/+pLq
+rL424i/y0d/NVMFnRPKgDEaVPomRR60nk8D3QNCZPK+L2oDG/fUgil0CF7lk2Mao
+6M+3d26QPr94TD5/UUHllmoZUmncx6nu2EZ5cC7m28V0x42Uj/F99+th6UDde+/a
+3jywW18EKeo3M73kkWoTWEWt48DzOhwpCQNA/TQ/a/d/EtjfR20l6b5dePiCmsUn
+PSmA2x6HC790ijETTHj7K4RDqhcoIX78Bvo1IEmBxR0kxZRxcg==
+-----END CERTIFICATE-----
+OCSP Request Data:
+    Version: 1 (0x0)
+    Requestor List:
+        Certificate ID:
+          Hash Algorithm: sha1
+          Issuer Name Hash: FB0BF915DAD2E2EBCAD0994C3AD65C44A914C227
+          Issuer Key Hash: 9645353389B73E981665F36567E7663512393F98
+          Serial Number: 033D019072825EE3397B7981374E16D8
+OCSP Response Data:
+    OCSP Response Status: successful (0x0)
+    Response Type: Basic OCSP Response
+    Version: 1 (0x0)
+    Responder Id: C = RO, ST = Bucharest, O = ATM ORG, OU = ATM ROOT CA, CN = ocsp3, emailAddress = ocsp3@pki.com
+    Produced At: Feb 20 19:17:22 2020 GMT
+    Responses:
+    Certificate ID:
+      Hash Algorithm: sha1
+      Issuer Name Hash: FB0BF915DAD2E2EBCAD0994C3AD65C44A914C227
+      Issuer Key Hash: 9645353389B73E981665F36567E7663512393F98
+      Serial Number: 033D019072825EE3397B7981374E16D8
+    Cert Status: good
+    This Update: Feb 20 19:17:22 2020 GMT
+
+    Signature Algorithm: sha256WithRSAEncryption
+         1c:73:95:e1:bf:fe:95:e5:31:2e:22:c9:8c:18:e4:ee:8b:0f:
+         22:ce:19:ad:21:b9:da:ac:98:11:a1:d5:4b:8e:b0:52:a3:07:
+         f7:4a:3b:28:1c:d2:5d:88:69:2b:b7:c0:53:7b:2d:97:62:72:
+         66:d7:12:3a:7b:fb:fc:ef:ed:8c:f6:3e:a0:e7:15:21:1d:83:
+         07:1e:af:5a:bf:a9:c8:e2:11:9d:b4:22:09:78:a3:cb:99:88:
+         22:83:41:7c:32:8a:9f:f5:74:e2:c7:55:77:d7:ee:05:7f:40:
+         07:9c:5e:10:d4:4b:76:5b:53:f7:82:cc:a6:04:17:19:52:19:
+         c8:c6:7e:66:f6:02:69:0f:e6:05:d7:ae:83:22:1b:23:c1:55:
+         fa:ae:e7:d8:ee:15:4c:77:c9:6c:e1:40:c9:d0:10:89:60:52:
+         f1:d6:e2:16:3c:ec:17:93:00:fb:e4:15:1b:07:e3:1c:dd:63:
+         46:9f:3a:14:9e:5b:96:82:b4:43:a6:2c:5e:be:8c:52:01:64:
+         38:51:db:aa:86:e1:c7:6b:bf:26:92:9e:41:6d:3c:39:76:17:
+         05:a9:01:8b:50:75:6c:c0:4d:62:cb:bf:cb:ef:67:ae:5e:eb:
+         44:ff:48:2d:fd:6c:b0:da:c3:33:8d:71:72:ee:e8:31:e2:58:
+         db:2e:ac:f3
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            03:3d:01:90:72:82:5e:e3:39:7b:79:81:37:4e:16:d8
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=RO, ST=Bucharest, O=ATM ORG, OU=ATM ROOT CA, CN=ATM COMMON NAME/emailAddress=atm_ca@pki.com
+        Validity
+            Not Before: Feb 17 13:39:54 2020 GMT
+            Not After : Feb 16 13:39:54 2021 GMT
+        Subject: C=RO, ST=Bucharest, O=ATM ORG, OU=ATM ROOT CA, CN=ocsp3/emailAddress=ocsp3@pki.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                RSA Public-Key: (2048 bit)
+                Modulus:
+                    00:ed:7a:e4:2c:8f:bf:72:75:3d:b3:8f:ec:b1:6e:
+                    7d:13:6c:05:78:c3:84:07:35:0b:fd:84:69:79:ea:
+                    51:a0:61:78:48:3b:7d:02:96:23:d7:e2:b8:54:2d:
+                    ca:db:17:f7:19:b8:ee:2d:e8:b3:61:ac:99:05:2a:
+                    bd:4b:52:e9:0c:4b:34:c9:b1:28:5a:ad:92:c4:92:
+                    03:ab:89:67:41:ee:94:c0:af:d1:36:60:24:3c:0d:
+                    98:a1:23:e1:19:ec:fb:c7:0d:d1:53:21:b3:6d:84:
+                    03:4e:2e:a8:4d:ff:20:ad:ca:c1:fe:d6:7e:92:76:
+                    52:ef:ba:49:ab:1a:d8:99:d3:e7:df:03:42:72:1e:
+                    5e:a2:c7:e3:5c:98:4e:40:6f:f0:48:61:e4:48:ec:
+                    ec:de:7c:c2:9e:01:84:a4:dd:46:c9:21:06:e3:6e:
+                    a6:f8:29:04:ae:3c:ba:af:a4:bf:be:2e:85:39:81:
+                    89:5f:06:fc:5a:54:2e:18:02:d0:7e:53:57:82:f6:
+                    a2:72:15:a2:11:ce:97:36:9c:aa:be:6c:c3:22:d5:
+                    30:23:f7:be:0b:d8:5b:96:5d:f5:f8:64:73:c0:3d:
+                    9b:4c:89:e2:06:28:12:8c:c7:b1:b7:57:70:36:12:
+                    8c:9a:b9:5c:fc:32:0f:eb:cd:89:51:8c:8c:c8:04:
+                    ad:b9
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            X509v3 Key Usage: 
+                Digital Signature, Non Repudiation, Key Encipherment
+            X509v3 Extended Key Usage: 
+                OCSP Signing
+            Authority Information Access: 
+                CA Issuers - URI:http://localhost:8080/diverse/rootca/root-ca.crt
+                OCSP - URI:http://127.0.0.1:8888
+
+            X509v3 CRL Distribution Points: 
+
+                Full Name:
+                  URI:http://localhost:8080/diverse/rootca/crl/crllist_der.crl
+
+    Signature Algorithm: sha256WithRSAEncryption
+         83:c1:85:87:a7:ed:b1:e2:4d:ba:fb:cd:b1:a4:09:a5:bb:c8:
+         5b:e9:65:c5:04:b0:b7:28:18:a0:d0:86:ba:a8:31:71:fe:ea:
+         20:d2:0c:11:3e:4d:70:5a:bf:da:2f:ea:e4:92:dc:e6:3b:79:
+         78:10:8a:e8:4c:1a:50:ed:d3:b2:9c:6b:b6:cf:c6:ad:4d:ff:
+         fa:92:ea:ac:be:36:e2:2f:f2:d1:df:cd:54:c1:67:44:f2:a0:
+         0c:46:95:3e:89:91:47:ad:27:93:c0:f7:40:d0:99:3c:af:8b:
+         da:80:c6:fd:f5:20:8a:5d:02:17:b9:64:d8:c6:a8:e8:cf:b7:
+         77:6e:90:3e:bf:78:4c:3e:7f:51:41:e5:96:6a:19:52:69:dc:
+         c7:a9:ee:d8:46:79:70:2e:e6:db:c5:74:c7:8d:94:8f:f1:7d:
+         f7:eb:61:e9:40:dd:7b:ef:da:de:3c:b0:5b:5f:04:29:ea:37:
+         33:bd:e4:91:6a:13:58:45:ad:e3:c0:f3:3a:1c:29:09:03:40:
+         fd:34:3f:6b:f7:7f:12:d8:df:47:6d:25:e9:be:5d:78:f8:82:
+         9a:c5:27:3d:29:80:db:1e:87:0b:bf:74:8a:31:13:4c:78:fb:
+         2b:84:43:aa:17:28:21:7e:fc:06:fa:35:20:49:81:c5:1d:24:
+         c5:94:71:72
+-----BEGIN CERTIFICATE-----
+MIIEcTCCA1mgAwIBAgIQAz0BkHKCXuM5e3mBN04W2DANBgkqhkiG9w0BAQsFADCB
+gjELMAkGA1

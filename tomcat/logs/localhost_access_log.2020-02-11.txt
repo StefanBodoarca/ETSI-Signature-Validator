@@ -1,0 +1,8 @@
+127.0.0.1 - - [11/Feb/2020:00:18:30 +0200] "GET /diverse/eu-lotl.xml HTTP/1.1" 200 389880
+127.0.0.1 - - [11/Feb/2020:01:18:38 +0200] "GET /diverse/eu-lotl.xml HTTP/1.1" 200 389880
+127.0.0.1 - - [11/Feb/2020:02:18:47 +0200] "GET /diverse/eu-lotl.xml HTTP/1.1" 200 389880
+127.0.0.1 - - [11/Feb/2020:13:11:32 +0200] "GET /diverse/eu-lotl.xml HTTP/1.1" 200 389880
+127.0.0.1 - - [11/Feb/2020:14:11:43 +0200] "GET /diverse/eu-lotl.xml HTTP/1.1" 200 389880
+127.0.0.1 - - [11/Feb/2020:15:11:52 +0200] "GET /diverse/eu-lotl.xml HTTP/1.1" 200 389880
+127.0.0.1 - - [11/Feb/2020:22:19:49 +0200] "GET /diverse/eu-lotl.xml HTTP/1.1" 200 389880
+127.0.0.1 - - [11/Feb/2020:23:19:58 +0200] "GET /diverse/eu-lotl.xml HTTP/1.1" 200 389880

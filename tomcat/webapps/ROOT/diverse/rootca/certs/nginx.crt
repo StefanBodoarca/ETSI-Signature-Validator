@@ -1,0 +1,101 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            03:3d:01:90:72:82:5e:e3:39:7b:79:81:37:4e:16:dc
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=RO, ST=Bucharest, O=ATM ORG, OU=ATM ROOT CA, CN=ATM COMMON NAME/emailAddress=atm_ca@pki.com
+        Validity
+            Not Before: Feb 19 03:11:45 2020 GMT
+            Not After : Feb 18 03:11:45 2021 GMT
+        Subject: C=RO, ST=Bucharest, O=ATM ORG, CN=SVA_BY_ATM_ROOT_CA
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                RSA Public-Key: (2048 bit)
+                Modulus:
+                    00:99:d3:bf:6b:53:3b:f5:4a:77:e8:8d:1e:a2:eb:
+                    58:30:23:a9:6a:6a:26:69:e4:d1:c5:bc:4e:12:bf:
+                    5c:c5:4d:10:e6:d9:f5:c1:08:ab:82:6e:81:d0:d4:
+                    7c:25:72:6b:b4:37:37:3c:3a:99:38:4c:7b:af:0c:
+                    c3:da:ab:3d:48:79:86:32:c4:fa:3e:2e:b5:2f:bc:
+                    a0:37:d2:d2:50:00:ba:3c:e5:b6:ef:57:e8:1b:51:
+                    47:d4:dd:cf:cf:db:bf:d3:f8:ab:97:f2:ee:07:91:
+                    91:76:c7:18:70:16:98:18:ec:1e:f7:49:d1:6e:a5:
+                    36:d7:b1:20:42:b0:1d:2a:82:d9:e8:77:85:04:5c:
+                    9a:b2:12:b5:4a:e2:b9:ba:83:48:0d:df:5c:28:af:
+                    eb:a0:cb:23:56:14:3a:b1:b6:7e:22:8b:3d:b1:c2:
+                    31:d6:f2:47:ea:16:cd:8c:93:c0:36:b2:43:ac:2b:
+                    ac:31:71:08:b1:30:4f:fe:46:e4:a6:0e:62:78:9a:
+                    ae:ce:95:c1:f8:ad:d5:c0:ff:06:c3:0e:dd:7e:23:
+                    8d:85:82:81:bb:ba:6d:bd:be:48:7a:1b:7e:ac:a6:
+                    80:e6:83:98:16:e6:f4:b8:b6:67:d3:f2:57:c3:7f:
+                    f0:52:77:89:fe:f4:f7:c4:17:d7:de:c7:59:16:d7:
+                    91:93
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                OpenSSL Generated Certificate
+            X509v3 Authority Key Identifier: 
+                keyid:96:45:35:33:89:B7:3E:98:16:65:F3:65:67:E7:66:35:12:39:3F:98
+
+            Authority Information Access: 
+                CA Issuers - URI:http://localhost:8080/diverse/rootca/root-ca.crt
+                OCSP - URI:http://127.0.0.1:8888
+
+            X509v3 CRL Distribution Points: 
+
+                Full Name:
+                  URI:http://localhost:8080/diverse/rootca/crl/crllist_der.crl
+
+            X509v3 Key Usage: 
+                Digital Signature, Non Repudiation, Key Encipherment
+            X509v3 Extended Key Usage: 
+                TLS Web Client Authentication, TLS Web Server Authentication
+            X509v3 Subject Key Identifier: 
+                64:DC:B4:EC:F9:40:83:30:C2:E7:85:D8:09:6B:D8:15:BC:5A:1D:13
+    Signature Algorithm: sha256WithRSAEncryption
+         20:8d:0f:7d:73:a7:2b:e8:2c:76:40:7d:a7:cb:90:41:68:2b:
+         8d:0d:dd:85:79:93:2a:2e:3a:f8:f7:4c:ce:31:b4:af:5c:eb:
+         7c:f1:13:8e:31:84:37:bd:69:36:db:c9:8c:d5:24:04:9b:76:
+         50:2a:63:05:1f:d2:77:13:68:9c:51:49:cb:49:c5:df:ac:a5:
+         4b:b0:b3:33:75:ea:ed:77:2e:2a:79:da:31:7f:c5:02:5c:4c:
+         6a:a8:6e:83:b5:64:c3:dc:a3:bc:3f:6c:21:e1:8b:a2:77:c2:
+         63:fd:88:a0:9d:7a:6e:65:de:bf:dc:16:53:b7:83:47:5c:87:
+         9b:45:e5:c5:14:66:ce:e2:c3:4c:b4:45:c5:f0:dc:e4:fc:6e:
+         ad:cb:22:22:26:7e:de:55:f6:08:5c:e7:5d:93:3c:15:f7:ad:
+         38:af:83:7b:c1:83:da:29:af:49:54:aa:3c:5c:87:f1:4e:6f:
+         67:64:de:73:0a:61:fc:1d:2b:6b:3b:b4:c1:7a:ef:cb:95:ce:
+         04:58:de:96:ce:7c:76:62:50:8f:ed:1f:33:2d:3d:37:77:5b:
+         0d:c1:1a:36:49:e8:70:63:20:ee:50:7e:74:5e:4d:78:1b:e3:
+         f8:db:0b:95:b5:b0:db:4d:02:09:f7:0f:74:48:87:d4:b6:54:
+         92:8f:fd:d4
+-----BEGIN CERTIFICATE-----
+MIIExDCCA6ygAwIBAgIQAz0BkHKCXuM5e3mBN04W3DANBgkqhkiG9w0BAQsFADCB
+gjELMAkGA1UEBhMCUk8xEjAQBgNVBAgMCUJ1Y2hhcmVzdDEQMA4GA1UECgwHQVRN
+IE9SRzEUMBIGA1UECwwLQVRNIFJPT1QgQ0ExGDAWBgNVBAMMD0FUTSBDT01NT04g
+TkFNRTEdMBsGCSqGSIb3DQEJARYOYXRtX2NhQHBraS5jb20wHhcNMjAwMjE5MDMx
+MTQ1WhcNMjEwMjE4MDMxMTQ1WjBQMQswCQYDVQQGEwJSTzESMBAGA1UECAwJQnVj
+aGFyZXN0MRAwDgYDVQQKDAdBVE0gT1JHMRswGQYDVQQDDBJTVkFfQllfQVRNX1JP
+T1RfQ0EwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCZ079rUzv1Snfo
+jR6i61gwI6lqaiZp5NHFvE4Sv1zFTRDm2fXBCKuCboHQ1Hwlcmu0Nzc8Opk4THuv
+DMPaqz1IeYYyxPo+LrUvvKA30tJQALo85bbvV+gbUUfU3c/P27/T+KuX8u4HkZF2
+xxhwFpgY7B73SdFupTbXsSBCsB0qgtnod4UEXJqyErVK4rm6g0gN31wor+ugyyNW
+FDqxtn4iiz2xwjHW8kfqFs2Mk8A2skOsK6wxcQixME/+RuSmDmJ4mq7OlcH4rdXA
+/wbDDt1+I42FgoG7um29vkh6G36spoDmg5gW5vS4tmfT8lfDf/BSd4n+9PfEF9fe
+x1kW15GTAgMBAAGjggFlMIIBYTAJBgNVHRMEAjAAMCwGCWCGSAGG+EIBDQQfFh1P
+cGVuU1NMIEdlbmVyYXRlZCBDZXJ0aWZpY2F0ZTAfBgNVHSMEGDAWgBSWRTUzibc+
+mBZl82Vn52Y1Ejk/mDBvBggrBgEFBQcBAQRjMGEwPAYIKwYBBQUHMAKGMGh0dHA6
+Ly9sb2NhbGhvc3Q6ODA4MC9kaXZlcnNlL3Jvb3RjYS9yb290LWNhLmNydDAhBggr
+BgEFBQcwAYYVaHR0cDovLzEyNy4wLjAuMTo4ODg4MEkGA1UdHwRCMEAwPqA8oDqG
+OGh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9kaXZlcnNlL3Jvb3RjYS9jcmwvY3JsbGlz
+dF9kZXIuY3JsMAsGA1UdDwQEAwIF4DAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYB
+BQUHAwEwHQYDVR0OBBYEFGTctOz5QIMwwueF2Alr2BW8Wh0TMA0GCSqGSIb3DQEB
+CwUAA4IBAQAgjQ99c6cr6Cx2QH2ny5BBaCuNDd2FeZMqLjr490zOMbSvXOt88ROO
+MYQ3vWk228mM1SQEm3ZQKmMFH9J3E2icUUnLScXfrKVLsLMzdertdy4qedoxf8UC
+XExqqG6DtWTD3KO8P2wh4Yuid8Jj/YignXpuZd6/3BZTt4NHXIebReXFFGbO4sNM
+tEXF8Nzk/G6tyyIiJn7eVfYIXOddkzwV9604r4N7wYPaKa9JVKo8XIfxTm9nZN5z
+CmH8HStrO7TBeu/Llc4EWN6Wznx2YlCP7R8zLT03d1sNwRo2SehwYyDuUH50Xk14
+G+P42wuVtbDbTQIJ9w90SIfUtlSSj/3U
+-----END CERTIFICATE-----
