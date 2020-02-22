@@ -1,0 +1,19 @@
+LOTL-2
+
+1.
+
+Fișier test     		Rezultat Așteptat    Rezultat Obținut
+2.1.1-TEST-FILE.xml		AdESig		     AdESig
+2.1.2-TEST-FILE.xml		AdESig		     AdESig
+2.1.3-TEST-FILE.xml		QESig		     QESig
+
+
+LOTL-3
+
+Fișier test     		Rezultat Așteptat    Rezultat Obținut
+7.4.1-TEST-FILE.xml		QESig		     QESig
+7.1.1-TEST-FILE.xml		AdESig		     AdESig
+5.1.3-TEST-FILE.xml		QESig		     QESig
+4.2.3-TEST-FILE.xml		AdESig-QC	     AdESig-QC
+6.4.6-TEST-FILE.xml		N/A		     N/A
+6.3.2-TEST-FILE.xml		AdESig-QC	     AdESig-QC

@@ -137,8 +137,8 @@ public class DSSConfig {
 	@Bean
 	public TSLRepository tslRepository() throws IOException {
 		TSLRepository tslRepository = new TSLRepository();
-		//tslRepository.setTrustedListsCertificateSource(new TrustedListsCertificateSource());
-		tslRepository.setTrustedListsCertificateSource(trustedListSource());
+		tslRepository.setTrustedListsCertificateSource(new TrustedListsCertificateSource());
+		//tslRepository.setTrustedListsCertificateSource(trustedListSource());
 		
 		return tslRepository;
 	}
