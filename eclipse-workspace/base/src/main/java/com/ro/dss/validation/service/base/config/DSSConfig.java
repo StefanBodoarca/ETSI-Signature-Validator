@@ -81,25 +81,14 @@ public class DSSConfig {
 	@Value("${default.validation.policy}")
 	private String defaultValidationPolicy;
 	
-	@Value("${crl.url.source}")
-	private String crlURL;
-	
-	@Value("${crl.offline.path.source}")
-	private String crlOfflinePath;
 	
 	@Value("${crl.maximum.delay}")
 	private Integer crlMaximumDelay;
 	
 	@Autowired
 	private DataSource dataSource;
-	
-	private byte[] CRL_LIST = null;
-	
-	@PostConstruct
-	public void fillCrlList() {
-		CRL_LIST = dataLoader().get(crlURL);
-	}
 
+	
 	@Bean
 	public KeyStoreCertificateSource trustStore() throws IOException {
 		return new KeyStoreCertificateSource(new ClassPathResource(ksFilename).getFile(), ksType, ksPassword);
@@ -120,6 +109,7 @@ public class DSSConfig {
 	public CertificateVerifier certificateVerifier() throws Exception {
 		CommonCertificateVerifier certificateVerifier = new CommonCertificateVerifier();
 		certificateVerifier.setTrustedCertSource(trustedListSource());
+		//certificateVerifier.setTrustedCertSource(trustedListsCertificateSource());
 		//certificateVerifier.setTrustedCertSource(trustedListSourceSecond());
 		certificateVerifier.setCrlSource(cachedCRLSource());
 		//certificateVerifier.setOcspSource(cachedOCSPSource());
@@ -133,12 +123,18 @@ public class DSSConfig {
 		certificateVerifier.setCheckRevocationForUntrustedChains(false);
 		return certificateVerifier;
 	}
+	
+	@Bean
+	public TrustedListsCertificateSource trustedListsCertificateSource() {
+		return new TrustedListsCertificateSource();
+	}
 
 	@Bean
 	public TSLRepository tslRepository() throws IOException {
 		TSLRepository tslRepository = new TSLRepository();
-		tslRepository.setTrustedListsCertificateSource(new TrustedListsCertificateSource());
-		//tslRepository.setTrustedListsCertificateSource(trustedListSource());
+		//tslRepository.setTrustedListsCertificateSource(new TrustedListsCertificateSource());
+		tslRepository.setTrustedListsCertificateSource(trustedListSource());
+		//tslRepository.setTrustedListsCertificateSource(trustedListsCertificateSource());
 		
 		return tslRepository;
 	}
@@ -161,28 +157,6 @@ public class DSSConfig {
 		OnlineCRLSource onlineCRLSource = new OnlineCRLSource();
 		onlineCRLSource.setDataLoader(dataLoader());
 		return onlineCRLSource;
-	}
-	
-	@Bean
-	public COfflineCRLSource cofflineCRLSource() {
-		COfflineCRLSource cofflineCRLSource = new COfflineCRLSource();
-		cofflineCRLSource.addCRL(CRL_LIST, RevocationOrigin.EXTERNAL);
-		return cofflineCRLSource;
-	}
-	
-	@Bean
-	public ListCRLSource listCRLSource() throws FileNotFoundException {
-		ListCRLSource listCRLSource = new ListCRLSource(cofflineCRLSource());
-		//ListCRLSource listCRLSource = new ListCRLSource(externalResourcesCRLSource());
-		return listCRLSource;
-	}
-	
-	@Bean
-	public ExternalResourcesCRLSource externalResourcesCRLSource() throws FileNotFoundException {
-		File initialFile = new File(crlOfflinePath);
-		InputStream targetStream = new FileInputStream(initialFile);
-		ExternalResourcesCRLSource externalResourcesCRLSource = new ExternalResourcesCRLSource(targetStream);
-		return externalResourcesCRLSource;
 	}
 	
 	@Bean
@@ -251,9 +225,10 @@ public class DSSConfig {
 		validationJob.setLotlUrl(lotlUrl);
 		validationJob.setLotlCode(lotlCountryCode);
 		validationJob.setOjUrl(currentOjUrl);
+		
 		validationJob.setCheckLOTLSignature(true);
 		validationJob.setCheckTSLSignatures(true);
-		validationJob.refresh();
+		//validationJob.refresh();
 		return validationJob;
 	}
 }

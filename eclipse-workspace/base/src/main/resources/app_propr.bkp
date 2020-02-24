@@ -5,11 +5,17 @@ content.keystore.type = PKCS12
 #content.keystore.filename = keystore.p12
 #content.keystore.filename = keystore_tmp.p12
 #content.keystore.filename = keystore_root.p12
-content.keystore.filename = keystorefff.p12
-#content.keystore.filename = ./QES-Validation/LOTL-3/CERT-LOTL-3.p12
-#content.keystore.password = esig-password
-content.keystore.password = 123456
+#content.keystore.filename = keystorefff.p12
+content.keystore.filename = CERT-LOTL-3.p12
+content.keystore.password = esig-password
+#content.keystore.password = 1234
 #content.keystore.password = dss-password
+
+
+##CRL
+crl.url.source = http://localhost:8080/diverse/crllist_der.crl
+#crl.url.source = http://localhost:8080/diverse/eidc201508.crl
+crl.offline.path.source = /home/stefan/workspace/disertatie/eclipse-workspace/base/src/main/resources/crllist_der.crl
 
 
 
@@ -30,8 +36,8 @@ datasource.username = sa
 datasource.password =
 
 current.oj.url = https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv:OJ.C_.2019.276.01.0001.01.ENG
-current.lotl.url = https://ec.europa.eu/tools/lotl/eu-lotl.xml
-#current.lotl.url = https://webgate.ec.europa.eu/esig-validation-tests/tl/LOTL-3.xml
+#current.lotl.url = https://ec.europa.eu/tools/lotl/eu-lotl.xml
+current.lotl.url = https://webgate.ec.europa.eu/esig-validation-tests/tl/LOTL-3.xml
 lotl.country.code = EU
 
 
