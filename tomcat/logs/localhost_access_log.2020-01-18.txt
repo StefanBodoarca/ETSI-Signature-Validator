@@ -1,8 +1,0 @@
-127.0.0.1 - - [18/Jan/2020:00:23:29 +0200] "GET /diverse/eu-lotl.xml HTTP/1.1" 200 389880
-127.0.0.1 - - [18/Jan/2020:10:50:04 +0200] "GET /diverse/eu-lotl.xml HTTP/1.1" 200 389880
-127.0.0.1 - - [18/Jan/2020:10:50:04 +0200] "GET /dss-demo-webapp-5.5/services/ HTTP/1.1" 200 5815
-127.0.0.1 - - [18/Jan/2020:10:50:04 +0200] "GET /dss-demo-webapp-5.5/services/?stylesheet=1 HTTP/1.1" 200 367
-127.0.0.1 - - [18/Jan/2020:10:50:04 +0200] "GET /favicon.ico HTTP/1.1" 200 21630
-127.0.0.1 - - [18/Jan/2020:11:50:13 +0200] "GET /diverse/eu-lotl.xml HTTP/1.1" 200 389880
-127.0.0.1 - - [18/Jan/2020:14:29:37 +0200] "GET /diverse/eu-lotl.xml HTTP/1.1" 200 389880
-127.0.0.1 - - [18/Jan/2020:15:29:47 +0200] "GET /diverse/eu-lotl.xml HTTP/1.1" 200 389880
