@@ -1,3 +1,5 @@
+ETSI compliant electronic signature validation service
+
 # disertatie
 
 https://spring.io/guides/gs/rest-service/<br/>
